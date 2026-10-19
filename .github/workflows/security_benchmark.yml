@@ -1,0 +1,61 @@
+name: Security Benchmark CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch: # Permite disparo manual pelo painel do GitHub
+
+jobs:
+  run-benchmark:
+    name: Executar Benchmark de Segurança
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout do Código
+        uses: actions/checkout@v4
+
+      - name: 2. Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 3. Executar Pré-processamento do Dataset (LLM Sanitization)
+        run: |
+          python diretiva_preprocessamento.py
+
+      - name: 4. Executar Análise SAST com Semgrep
+        run: |
+          pip install semgrep
+          mkdir -p resultados
+          semgrep scan --config=p/typescript --config=p/javascript --json -o resultados/resultado_semgrep.json ./dataset_sast/ || true
+
+      - name: 5. Executar Análise SAST com SonarQube
+        uses: SonarSource/sonarqube-scan-action@v2.0.2
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          args: >
+            -Dsonar.projectKey=owasp-juice-shop-benchmark
+            -Dsonar.sources=dataset_sast
+            -Dsonar.exclusions=**/node_modules/**
+
+      - name: 6. Executar Inferência das LLMs (via API Remota)
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+        run: |
+          pip install openai
+          python executar_llm.py || true
+
+      - name: 7. Upload dos Artefatos de Resultados (JSONs e dataset_llm)
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorios-e-dataset-sanitizado
+          path: |
+            resultados/
+            dataset_llm/
+          retention-days: 30
