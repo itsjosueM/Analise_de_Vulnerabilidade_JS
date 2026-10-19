@@ -16,11 +16,7 @@ jobs:
       - name: 1. Checkout do Código
         uses: actions/checkout@v4
 
-      - name: 2. Configurar Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
+
 
       - name: 3. Executar Pré-processamento do Dataset (LLM Sanitization)
         run: |
