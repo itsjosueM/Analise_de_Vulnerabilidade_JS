@@ -40,6 +40,7 @@ jobs:
           semgrep scan --config=p/typescript --config=p/javascript --json -o resultados/resultado_semgrep.json ./dataset_sast/ || true
 
       - name: 5. Análise SAST com SonarQube
+        continue-on-error: true
         uses: SonarSource/sonarqube-scan-action@v2.0.2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
