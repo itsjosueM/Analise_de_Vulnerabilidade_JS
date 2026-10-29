@@ -5,16 +5,24 @@ on:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
-  workflow_dispatch: # Permite disparo manual via interface do GitHub
+  workflow_dispatch:
 
 jobs:
   run-benchmark:
     name: Executar Pipeline de Benchmark
     runs-on: ubuntu-latest
+    
+    # 1. Garante permissão explícita de leitura para o runner no repositório
+    permissions:
+      contents: read
 
     steps:
       - name: 1. Checkout do Código
         uses: actions/checkout@v4
+        with:
+          # 2. Injeta o token oficial para autenticação segura no Git
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: 2. Configurar Python 3.11
         uses: actions/setup-python@v5
@@ -42,15 +50,7 @@ jobs:
             -Dsonar.sources=dataset_sast
             -Dsonar.exclusions=**/node_modules/**
 
-      - name: 6. Inferência das LLMs (API Remota)
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-        run: |
-          pip install openai
-          python executar_llm.py || true
-
-      - name: 7. Upload dos Artefatos de Resultados
+      - name: 6. Upload dos Artefatos de Resultados
         uses: actions/upload-artifact@v4
         with:
           name: resultados-benchmark
