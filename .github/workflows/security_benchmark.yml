@@ -1,34 +1,37 @@
-name: Security Benchmark CI/CD Pipeline
+name: Security Benchmark Pipeline
 
 on:
   push:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
-  workflow_dispatch: # Permite disparo manual pelo painel do GitHub
+  workflow_dispatch: # Permite disparo manual via interface do GitHub
 
 jobs:
   run-benchmark:
-    name: Executar Benchmark de Segurança
+    name: Executar Pipeline de Benchmark
     runs-on: ubuntu-latest
 
     steps:
       - name: 1. Checkout do Código
         uses: actions/checkout@v4
 
+      - name: 2. Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-
-      - name: 3. Executar Pré-processamento do Dataset (LLM Sanitization)
+      - name: 3. Executar Pré-processamento (Sanitização)
         run: |
           python diretiva_preprocessamento.py
 
-      - name: 4. Executar Análise SAST com Semgrep
+      - name: 4. Análise SAST com Semgrep
         run: |
           pip install semgrep
           mkdir -p resultados
           semgrep scan --config=p/typescript --config=p/javascript --json -o resultados/resultado_semgrep.json ./dataset_sast/ || true
 
-      - name: 5. Executar Análise SAST com SonarQube
+      - name: 5. Análise SAST com SonarQube
         uses: SonarSource/sonarqube-scan-action@v2.0.2
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -39,7 +42,7 @@ jobs:
             -Dsonar.sources=dataset_sast
             -Dsonar.exclusions=**/node_modules/**
 
-      - name: 6. Executar Inferência das LLMs (via API Remota)
+      - name: 6. Inferência das LLMs (API Remota)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -47,10 +50,10 @@ jobs:
           pip install openai
           python executar_llm.py || true
 
-      - name: 7. Upload dos Artefatos de Resultados (JSONs e dataset_llm)
+      - name: 7. Upload dos Artefatos de Resultados
         uses: actions/upload-artifact@v4
         with:
-          name: relatorios-e-dataset-sanitizado
+          name: resultados-benchmark
           path: |
             resultados/
             dataset_llm/
