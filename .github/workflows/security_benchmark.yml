@@ -31,7 +31,7 @@ jobs:
 
       - name: 3. Executar Pré-processamento (Sanitização)
         run: |
-          python diretiva_preprocessamento.py
+          python Lab/diretiva_preprocessamento.py
 
       - name: 4. Análise SAST com Semgrep
         run: |
