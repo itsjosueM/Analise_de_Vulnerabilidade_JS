@@ -1,4 +1,0 @@
-Ferramenta,Tipo,VP,FP,FN,TN,Precisão,Recall,F1-Score,FP Rate
-Semgrep,SAST,6,0,14,10,100%,30%,46%,0%
-SonarQube,SAST,1,0,19,10,100%,5%,10%,0%
-DeepSeek,LLM,4,6,16,4,40%,20%,27%,60%
