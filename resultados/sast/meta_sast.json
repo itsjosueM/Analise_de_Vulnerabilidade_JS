@@ -1,0 +1,31 @@
+{
+  "data": "2026-11-21T03:37:58",
+  "dataset": "Lab/dataset_sast",
+  "n_arquivos": 30,
+  "github_actions": true,
+  "github_run_id": "44862119143",
+  "github_sha": "994d16f864c73be1a61dade8dd445e18ae6f6fac",
+  "runner_os": "Linux",
+  "semgrep": {
+    "imagem": "semgrep/semgrep:1.49.0",
+    "duracao_s": 8.9,
+    "rc": 0,
+    "achados": 10,
+    "erros": 1,
+    "configs": [
+      "p/typescript",
+      "p/javascript"
+    ]
+  },
+  "sonarqube": {
+    "imagem": "sonarqube:25.5.0.107428-community",
+    "scanner": "sonarsource/sonar-scanner-cli:11.3",
+    "duracao_analise_s": 36.8,
+    "issues": 58,
+    "tipos": {
+      "CODE_SMELL": 57,
+      "VULNERABILITY": 1
+    },
+    "hotspots": 18
+  }
+}

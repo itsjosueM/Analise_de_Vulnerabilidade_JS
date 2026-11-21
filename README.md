@@ -2,8 +2,6 @@
 
 Reprodução do artigo **"Avaliação comparativa do desempenho de inteligências artificiais generativas e ferramentas tradicionais na análise de código-fonte JavaScript"** (Pimentel & Progetti, SBSeg 2025, WTICG). O artigo compara dois SAST (Semgrep, SonarQube) e dois LLMs (DeepSeek-Coder 1.3b, CodeLlama 7b) na detecção de vulnerabilidades no OWASP Juice Shop. O PDF está em `Planejamento/Artigo Original/`.
 
-O repositório do projeto é o mesmo do coautor (https://github.com/itsjosueM/Analise_de_Vulnerabilidade_JS); aqui o trabalho fica local e sem commits. Uma cópia dele está em `../Repositorios_externos/`.
-
 ## Como reproduzir
 
 Como no artigo original, **os resultados de SAST vêm do pipeline do GitHub Actions** (`.github/workflows/benchmark.yml`). O script `Lab/rodar_sast.py` recusa rodar fora do Actions, e `Lab/analisar_resultados.py` rejeita resultados de SAST que não tenham sido gerados lá.
@@ -17,11 +15,13 @@ O workflow **Benchmark SAST x LLM** tem dois jobs e não faz commit de nada:
 | `sast` | Semgrep 1.49.0 (`p/typescript`, `p/javascript`) e SonarQube Community 25.5 (scanner 11.3) sobre `Lab/dataset_sast`; roda em todo push/PR e manualmente | `resultados-sast` |
 | `analise` | depois do `sast`: métricas, tipos, conferência, filtro e híbrido (`analisar_resultados.py`) e variação entre execuções, usando as respostas dos LLMs versionadas em `Lab/resultados/llm/` | `resultados-analise` |
 
-Para usar: subir o repositório ao GitHub, abrir **Actions → Benchmark SAST x LLM → Run workflow** e, ao terminar, baixar o artefato `resultados-sast` para `resultados/sast/`.
+Para usar: abrir **Actions → Benchmark SAST x LLM → Run workflow** e, ao terminar, baixar os artefatos `resultados-sast` (para `resultados/sast/`) e `resultados-analise` (para `resultados/analise/` e `resultados/repeticoes.md`).
 
 ### LLMs: rodam localmente, via Ollama
 
 Os LLMs não rodam no Actions. Com o Ollama instalado e os modelos baixados (`ollama pull codellama:7b` e `ollama pull deepseek-coder:1.3b`), rode `scan_llm.py` e salve cada execução como `Lab/resultados/llm/llm_results_exec<N>.json` (o script não usa semente, então as respostas variam). Rode também `teste_codigo_seguro.py`. Esses arquivos são versionados e o job `analise` usa todos os `llm_results_exec*.json`.
+
+Versões usadas nas execuções versionadas: Ollama 0.40.16; `codellama:7b` (id `8fdf8f752f6e`, 3,8 GB) e `deepseek-coder:1.3b` (id `3ddd2d3fc8d2`, 776 MB).
 
 ### Scripts (rodar a partir de `Lab/`)
 
@@ -38,11 +38,9 @@ python teste_codigo_seguro.py         # local via Ollama; 3 trechos trivialmente
 - **Dataset:** 30 arquivos (20 VULN + 10 SAFE) do Juice Shop v20.2.0 em `DataSet/` e `Lab/dataset_sast/` (originais, usados pelo SAST), idênticos aos do repositório do projeto. `Lab/dataset_llm/` é a cópia pré-processada que vai para os LLMs.
 - **`classificar_respostas.py`:** converte cada resposta bruta em `vulnerable` ou `safe` (JSON válido → vulnerable; "Código seguro" → safe; texto livre pelo que afirma ou nega). Respostas de timeout (`{"erro": ...}`) ficam fora das contas.
 
-> **Pendente:** ainda não há resultados de SAST do pipeline. Os números de SAST do artigo são provisórios até a primeira execução; a lista do que atualizar está em `Planejamento/Notas/pendencias-pipeline.md`.
-
 ## Resultados (30 arquivos, nível de arquivo, Código 2 do artigo)
 
-LLMs: média das execuções do `scan_llm.py`, arredondada (timeouts de 300 s excluídos). **As linhas de Semgrep e SonarQube ainda não vêm do pipeline** e serão substituídas pelas dele. Detalhes (após rodar o pipeline) em `resultados/analise/analise_llm.md`.
+LLMs: média das execuções do `scan_llm.py`, arredondada (timeouts de 300 s excluídos). Semgrep e SonarQube: resultados do pipeline do GitHub Actions (run `44862119143`, registrado em `resultados/sast/meta_sast.json`). Detalhes em `resultados/analise/analise_llm.md`.
 
 | Ferramenta | Precisão | Recall | F1 | VP | FP | FN |
 |---|---|---|---|---|---|---|
@@ -73,11 +71,10 @@ resultados/     repeticoes.md e teste_codigo_seguro/; sast/ e analise/ chegam co
 .github/        pipeline do GitHub Actions (benchmark.yml)
 ```
 
-O artigo em LaTeX (`main.tex`) fica fora do repositório, na pasta acima (`Reprodução_de_Artigo/Artigo/`); compile com `pdflatex > bibtex > pdflatex x2`. O `.vscode/` local não é versionado porque tem caminhos da máquina de quem o criou.
+O artigo em LaTeX não faz parte deste repositório.
 
 ## Notas (`Planejamento/Notas/`)
 
 | Nota | Conteúdo |
 |---|---|
 | `status-reproducao-e-diferenciais.md` | o que foi feito, o que falta e o diferencial |
-| `pendencias-pipeline.md` | o que atualizar no artigo depois da primeira execução do pipeline |

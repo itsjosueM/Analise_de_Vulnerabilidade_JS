@@ -1,0 +1,1591 @@
+{
+ "execs": [
+  {
+   "deepseek": {
+    "n_resp": 30,
+    "timeouts": 0,
+    "marcados": 27,
+    "safe_marcados": 9,
+    "n_safe_resp": 10,
+    "json_valido": 13,
+    "json_contraditorio": 3,
+    "metricas": {
+     "Precisao": 0.6666666666666666,
+     "Recall": 0.9,
+     "F1-Score": 0.7659574468085106,
+     "FP Rate": 0.3333333333333333,
+     "VP": 18,
+     "FP": 9,
+     "FN": 2
+    },
+    "cfg": {
+     "sem filtro": {
+      "Precisao": 0.6666666666666666,
+      "Recall": 0.9,
+      "F1-Score": 0.7659574468085106,
+      "FP Rate": 0.3333333333333333,
+      "VP": 18,
+      "FP": 9,
+      "FN": 2
+     },
+     "filtrado": {
+      "Precisao": 0.6666666666666666,
+      "Recall": 0.4,
+      "F1-Score": 0.5,
+      "FP Rate": 0.3333333333333333,
+      "VP": 8,
+      "FP": 4,
+      "FN": 12
+     },
+     "híbrido A (Semgrep ou SonarQube com hotspots, ou LLM filtrado)": {
+      "Precisao": 0.6842105263157895,
+      "Recall": 0.65,
+      "F1-Score": 0.6666666666666666,
+      "FP Rate": 0.3157894736842105,
+      "VP": 13,
+      "FP": 6,
+      "FN": 7
+     },
+     "híbrido B (Semgrep ou SonarQube só vulnerabilities, ou LLM filtrado)": {
+      "Precisao": 0.75,
+      "Recall": 0.6,
+      "F1-Score": 0.6666666666666666,
+      "FP Rate": 0.25,
+      "VP": 12,
+      "FP": 4,
+      "FN": 8
+     }
+    },
+    "sast_ref": {
+     "SAST A": {
+      "Precisao": 0.8,
+      "Recall": 0.4,
+      "F1-Score": 0.5333333333333333,
+      "FP Rate": 0.2,
+      "VP": 8,
+      "FP": 2,
+      "FN": 12
+     },
+     "SAST B": {
+      "Precisao": 1.0,
+      "Recall": 0.3,
+      "F1-Score": 0.46153846153846156,
+      "FP Rate": 0.0,
+      "VP": 6,
+      "FP": 0,
+      "FN": 14
+     }
+    },
+    "rej_F1": 15,
+    "rej_F2": 0,
+    "t3": {
+     "VULN": {
+      "Exposição de dados": 2,
+      "Injeção (SQL/NoSQL/código)": 6,
+      "Autenticação": 6,
+      "Controle de acesso": 3,
+      "Upload/caminho de arquivo": 2,
+      "Validação de entrada": 2,
+      "XSS": 2,
+      "SSRF": 1,
+      "Redirecionamento": 1,
+      "CSRF": 2
+     },
+     "SAFE": {
+      "Validação de entrada": 3,
+      "Controle de acesso": 2,
+      "Injeção (SQL/NoSQL/código)": 6,
+      "XSS": 1,
+      "Autenticação": 2,
+      "CSRF": 1
+     }
+    },
+    "confere": 6,
+    "confere_de": 10,
+    "tipos_conf": 16,
+    "tipos_medios": 1.5555555555555556,
+    "so_sql_sem_sql": 10,
+    "cita_sql": 12,
+    "conf_por_arquivo": {
+     "search-result.component.ts": false,
+     "login.ts": true,
+     "search.ts": false,
+     "updateProductReviews.ts": true,
+     "app.routing.ts": false,
+     "server.ts": true,
+     "profileImageUrlUpload.ts": true,
+     "updateUserProfile.ts": true,
+     "basketItems.ts": true,
+     "deluxe.ts": false
+    },
+    "flag": [
+     "2fa.ts",
+     "accessLogDisclosureChallenge_1_correct.ts",
+     "app.routing.ts",
+     "b2bOrder.ts",
+     "basketItems.ts",
+     "changePassword.ts",
+     "changeProductChallenge_3_correct.ts",
+     "chatbotGreedyInjectionChallenge_2_correct.ts",
+     "chatbotPromptInjectionChallenge_2_correct.ts",
+     "dataErasure.ts",
+     "dbSchemaChallenge_2_correct.ts",
+     "deluxe.ts",
+     "directoryListingChallenge_1_correct.ts",
+     "fileUpload.ts",
+     "insecurity.ts",
+     "localXssChallenge_2_correct.ts",
+     "login.ts",
+     "noSqlReviewsChallenge_3_correct.ts",
+     "profileImageUrlUpload.ts",
+     "redirect.ts",
+     "redirectCryptoCurrencyChallenge_3_correct.ts",
+     "resetPassword.ts",
+     "search-result.component.ts",
+     "server.ts",
+     "trackOrder.ts",
+     "updateProductReviews.ts",
+     "updateUserProfile.ts"
+    ],
+    "rel": {
+     "2fa.ts": [
+      "Autenticação",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "app.routing.ts": [],
+     "b2bOrder.ts": [],
+     "basketItems.ts": [
+      "Controle de acesso"
+     ],
+     "changePassword.ts": [
+      "Controle de acesso"
+     ],
+     "dataErasure.ts": [
+      "Autenticação"
+     ],
+     "deluxe.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "fileServer.ts": [],
+     "fileUpload.ts": [
+      "Upload/caminho de arquivo"
+     ],
+     "insecurity.ts": [],
+     "login.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "profileImageUrlUpload.ts": [
+      "Autenticação",
+      "SSRF",
+      "Upload/caminho de arquivo"
+     ],
+     "redirect.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento"
+     ],
+     "resetPassword.ts": [
+      "Validação de entrada"
+     ],
+     "search-result.component.ts": [
+      "Autenticação"
+     ],
+     "search.ts": [],
+     "server.ts": [
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "trackOrder.ts": [],
+     "updateProductReviews.ts": [
+      "Autenticação",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "updateUserProfile.ts": [
+      "CSRF"
+     ],
+     "accessLogDisclosureChallenge_1_correct.ts": [],
+     "changeProductChallenge_3_correct.ts": [
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "chatbotGreedyInjectionChallenge_2_correct.ts": [],
+     "chatbotPromptInjectionChallenge_2_correct.ts": [],
+     "dbSchemaChallenge_2_correct.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "directoryListingChallenge_1_correct.ts": [
+      "Autenticação",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "localXssChallenge_2_correct.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "noSqlReviewsChallenge_3_correct.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "redirectChallenge_4_correct.ts": [],
+     "redirectCryptoCurrencyChallenge_3_correct.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ]
+    }
+   },
+   "codellama": {
+    "n_resp": 27,
+    "timeouts": 3,
+    "marcados": 23,
+    "safe_marcados": 6,
+    "n_safe_resp": 9,
+    "json_valido": 3,
+    "json_contraditorio": 0,
+    "metricas": {
+     "Precisao": 0.7391304347826086,
+     "Recall": 0.9444444444444444,
+     "F1-Score": 0.8292682926829268,
+     "FP Rate": 0.2608695652173913,
+     "VP": 17,
+     "FP": 6,
+     "FN": 1
+    },
+    "cfg": {
+     "sem filtro": {
+      "Precisao": 0.7391304347826086,
+      "Recall": 0.9444444444444444,
+      "F1-Score": 0.8292682926829268,
+      "FP Rate": 0.2608695652173913,
+      "VP": 17,
+      "FP": 6,
+      "FN": 1
+     },
+     "filtrado": {
+      "Precisao": 0.7222222222222222,
+      "Recall": 0.7222222222222222,
+      "F1-Score": 0.7222222222222222,
+      "FP Rate": 0.2777777777777778,
+      "VP": 13,
+      "FP": 5,
+      "FN": 5
+     },
+     "híbrido A (Semgrep ou SonarQube com hotspots, ou LLM filtrado)": {
+      "Precisao": 0.6956521739130435,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.7804878048780488,
+      "FP Rate": 0.30434782608695654,
+      "VP": 16,
+      "FP": 7,
+      "FN": 2
+     },
+     "híbrido B (Semgrep ou SonarQube só vulnerabilities, ou LLM filtrado)": {
+      "Precisao": 0.7619047619047619,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.8205128205128205,
+      "FP Rate": 0.23809523809523808,
+      "VP": 16,
+      "FP": 5,
+      "FN": 2
+     }
+    },
+    "sast_ref": {
+     "SAST A": {
+      "Precisao": 0.7777777777777778,
+      "Recall": 0.3888888888888889,
+      "F1-Score": 0.5185185185185185,
+      "FP Rate": 0.2222222222222222,
+      "VP": 7,
+      "FP": 2,
+      "FN": 11
+     },
+     "SAST B": {
+      "Precisao": 1.0,
+      "Recall": 0.2777777777777778,
+      "F1-Score": 0.43478260869565216,
+      "FP Rate": 0.0,
+      "VP": 5,
+      "FP": 0,
+      "FN": 13
+     }
+    },
+    "rej_F1": 5,
+    "rej_F2": 0,
+    "t3": {
+     "VULN": {
+      "Validação de entrada": 6,
+      "Exposição de dados": 11,
+      "CSRF": 5,
+      "Injeção (SQL/NoSQL/código)": 14,
+      "Autenticação": 6,
+      "XSS": 9,
+      "Controle de acesso": 7,
+      "Redirecionamento": 5,
+      "Upload/caminho de arquivo": 1,
+      "SSRF": 1
+     },
+     "SAFE": {
+      "Exposição de dados": 4,
+      "Injeção (SQL/NoSQL/código)": 3,
+      "XSS": 2,
+      "Autenticação": 3,
+      "CSRF": 1,
+      "Validação de entrada": 1,
+      "Controle de acesso": 1,
+      "Redirecionamento": 1
+     }
+    },
+    "confere": 6,
+    "confere_de": 9,
+    "tipos_conf": 37,
+    "tipos_medios": 3.5217391304347827,
+    "so_sql_sem_sql": 15,
+    "cita_sql": 17,
+    "conf_por_arquivo": {
+     "search-result.component.ts": true,
+     "login.ts": false,
+     "search.ts": true,
+     "updateProductReviews.ts": true,
+     "app.routing.ts": false,
+     "profileImageUrlUpload.ts": false,
+     "updateUserProfile.ts": true,
+     "basketItems.ts": true,
+     "deluxe.ts": true
+    },
+    "flag": [
+     "accessLogDisclosureChallenge_1_correct.ts",
+     "app.routing.ts",
+     "b2bOrder.ts",
+     "basketItems.ts",
+     "changePassword.ts",
+     "dataErasure.ts",
+     "dbSchemaChallenge_2_correct.ts",
+     "deluxe.ts",
+     "directoryListingChallenge_1_correct.ts",
+     "fileServer.ts",
+     "fileUpload.ts",
+     "insecurity.ts",
+     "localXssChallenge_2_correct.ts",
+     "noSqlReviewsChallenge_3_correct.ts",
+     "profileImageUrlUpload.ts",
+     "redirect.ts",
+     "redirectCryptoCurrencyChallenge_3_correct.ts",
+     "resetPassword.ts",
+     "search-result.component.ts",
+     "search.ts",
+     "trackOrder.ts",
+     "updateProductReviews.ts",
+     "updateUserProfile.ts"
+    ],
+    "rel": {
+     "app.routing.ts": [
+      "Exposição de dados",
+      "Validação de entrada"
+     ],
+     "b2bOrder.ts": [],
+     "basketItems.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "changePassword.ts": [
+      "Autenticação",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "dataErasure.ts": [
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "deluxe.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "fileServer.ts": [
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "fileUpload.ts": [
+      "Upload/caminho de arquivo"
+     ],
+     "insecurity.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "login.ts": [],
+     "profileImageUrlUpload.ts": [
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "redirect.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "resetPassword.ts": [
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "search-result.component.ts": [
+      "Autenticação",
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "SSRF",
+      "XSS"
+     ],
+     "search.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "trackOrder.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "updateProductReviews.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "updateUserProfile.ts": [
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "accessLogDisclosureChallenge_1_correct.ts": [
+      "Exposição de dados"
+     ],
+     "changeProductChallenge_3_correct.ts": [],
+     "chatbotGreedyInjectionChallenge_2_correct.ts": [],
+     "dbSchemaChallenge_2_correct.ts": [
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "directoryListingChallenge_1_correct.ts": [
+      "Autenticação",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "localXssChallenge_2_correct.ts": [],
+     "noSqlReviewsChallenge_3_correct.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "redirectChallenge_4_correct.ts": [],
+     "redirectCryptoCurrencyChallenge_3_correct.ts": [
+      "Autenticação",
+      "Redirecionamento"
+     ]
+    }
+   }
+  },
+  {
+   "deepseek": {
+    "n_resp": 30,
+    "timeouts": 0,
+    "marcados": 23,
+    "safe_marcados": 6,
+    "n_safe_resp": 10,
+    "json_valido": 11,
+    "json_contraditorio": 0,
+    "metricas": {
+     "Precisao": 0.7391304347826086,
+     "Recall": 0.85,
+     "F1-Score": 0.7906976744186046,
+     "FP Rate": 0.2608695652173913,
+     "VP": 17,
+     "FP": 6,
+     "FN": 3
+    },
+    "cfg": {
+     "sem filtro": {
+      "Precisao": 0.7391304347826086,
+      "Recall": 0.85,
+      "F1-Score": 0.7906976744186046,
+      "FP Rate": 0.2608695652173913,
+      "VP": 17,
+      "FP": 6,
+      "FN": 3
+     },
+     "filtrado": {
+      "Precisao": 0.7272727272727273,
+      "Recall": 0.4,
+      "F1-Score": 0.5161290322580645,
+      "FP Rate": 0.2727272727272727,
+      "VP": 8,
+      "FP": 3,
+      "FN": 12
+     },
+     "híbrido A (Semgrep ou SonarQube com hotspots, ou LLM filtrado)": {
+      "Precisao": 0.7647058823529411,
+      "Recall": 0.65,
+      "F1-Score": 0.7027027027027027,
+      "FP Rate": 0.23529411764705882,
+      "VP": 13,
+      "FP": 4,
+      "FN": 7
+     },
+     "híbrido B (Semgrep ou SonarQube só vulnerabilities, ou LLM filtrado)": {
+      "Precisao": 0.8,
+      "Recall": 0.6,
+      "F1-Score": 0.6857142857142857,
+      "FP Rate": 0.2,
+      "VP": 12,
+      "FP": 3,
+      "FN": 8
+     }
+    },
+    "sast_ref": {
+     "SAST A": {
+      "Precisao": 0.8,
+      "Recall": 0.4,
+      "F1-Score": 0.5333333333333333,
+      "FP Rate": 0.2,
+      "VP": 8,
+      "FP": 2,
+      "FN": 12
+     },
+     "SAST B": {
+      "Precisao": 1.0,
+      "Recall": 0.3,
+      "F1-Score": 0.46153846153846156,
+      "FP Rate": 0.0,
+      "VP": 6,
+      "FP": 0,
+      "FN": 14
+     }
+    },
+    "rej_F1": 12,
+    "rej_F2": 0,
+    "t3": {
+     "VULN": {
+      "Autenticação": 6,
+      "Validação de entrada": 4,
+      "Injeção (SQL/NoSQL/código)": 3,
+      "Exposição de dados": 3,
+      "Controle de acesso": 4,
+      "Upload/caminho de arquivo": 2,
+      "XSS": 4,
+      "SSRF": 1,
+      "Redirecionamento": 1,
+      "CSRF": 1
+     },
+     "SAFE": {
+      "Exposição de dados": 1,
+      "Injeção (SQL/NoSQL/código)": 3,
+      "Validação de entrada": 1,
+      "Autenticação": 1,
+      "XSS": 1,
+      "Redirecionamento": 1
+     }
+    },
+    "confere": 2,
+    "confere_de": 10,
+    "tipos_conf": 11,
+    "tipos_medios": 1.608695652173913,
+    "so_sql_sem_sql": 6,
+    "cita_sql": 6,
+    "conf_por_arquivo": {
+     "search-result.component.ts": false,
+     "login.ts": false,
+     "search.ts": false,
+     "updateProductReviews.ts": false,
+     "app.routing.ts": false,
+     "server.ts": false,
+     "profileImageUrlUpload.ts": true,
+     "updateUserProfile.ts": true,
+     "basketItems.ts": false,
+     "deluxe.ts": false
+    },
+    "flag": [
+     "2fa.ts",
+     "accessLogDisclosureChallenge_1_correct.ts",
+     "app.routing.ts",
+     "b2bOrder.ts",
+     "basketItems.ts",
+     "changePassword.ts",
+     "chatbotGreedyInjectionChallenge_2_correct.ts",
+     "chatbotPromptInjectionChallenge_2_correct.ts",
+     "dataErasure.ts",
+     "dbSchemaChallenge_2_correct.ts",
+     "deluxe.ts",
+     "fileUpload.ts",
+     "insecurity.ts",
+     "localXssChallenge_2_correct.ts",
+     "login.ts",
+     "profileImageUrlUpload.ts",
+     "redirect.ts",
+     "redirectCryptoCurrencyChallenge_3_correct.ts",
+     "resetPassword.ts",
+     "search-result.component.ts",
+     "trackOrder.ts",
+     "updateProductReviews.ts",
+     "updateUserProfile.ts"
+    ],
+    "rel": {
+     "2fa.ts": [
+      "Autenticação"
+     ],
+     "app.routing.ts": [],
+     "b2bOrder.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "basketItems.ts": [
+      "Autenticação",
+      "Validação de entrada"
+     ],
+     "changePassword.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Validação de entrada"
+     ],
+     "dataErasure.ts": [],
+     "deluxe.ts": [
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "fileServer.ts": [],
+     "fileUpload.ts": [
+      "Upload/caminho de arquivo",
+      "XSS"
+     ],
+     "insecurity.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Validação de entrada"
+     ],
+     "login.ts": [
+      "Autenticação"
+     ],
+     "profileImageUrlUpload.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "SSRF",
+      "Upload/caminho de arquivo"
+     ],
+     "redirect.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "resetPassword.ts": [
+      "Exposição de dados",
+      "XSS"
+     ],
+     "search-result.component.ts": [],
+     "search.ts": [],
+     "server.ts": [],
+     "trackOrder.ts": [
+      "XSS"
+     ],
+     "updateProductReviews.ts": [],
+     "updateUserProfile.ts": [
+      "CSRF"
+     ],
+     "accessLogDisclosureChallenge_1_correct.ts": [],
+     "changeProductChallenge_3_correct.ts": [],
+     "chatbotGreedyInjectionChallenge_2_correct.ts": [
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "chatbotPromptInjectionChallenge_2_correct.ts": [
+      "Autenticação",
+      "Validação de entrada"
+     ],
+     "dbSchemaChallenge_2_correct.ts": [
+      "XSS"
+     ],
+     "directoryListingChallenge_1_correct.ts": [],
+     "localXssChallenge_2_correct.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "noSqlReviewsChallenge_3_correct.ts": [],
+     "redirectChallenge_4_correct.ts": [],
+     "redirectCryptoCurrencyChallenge_3_correct.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento"
+     ]
+    }
+   },
+   "codellama": {
+    "n_resp": 30,
+    "timeouts": 0,
+    "marcados": 28,
+    "safe_marcados": 10,
+    "n_safe_resp": 10,
+    "json_valido": 2,
+    "json_contraditorio": 0,
+    "metricas": {
+     "Precisao": 0.6428571428571429,
+     "Recall": 0.9,
+     "F1-Score": 0.75,
+     "FP Rate": 0.35714285714285715,
+     "VP": 18,
+     "FP": 10,
+     "FN": 2
+    },
+    "cfg": {
+     "sem filtro": {
+      "Precisao": 0.6428571428571429,
+      "Recall": 0.9,
+      "F1-Score": 0.75,
+      "FP Rate": 0.35714285714285715,
+      "VP": 18,
+      "FP": 10,
+      "FN": 2
+     },
+     "filtrado": {
+      "Precisao": 0.6666666666666666,
+      "Recall": 0.6,
+      "F1-Score": 0.631578947368421,
+      "FP Rate": 0.3333333333333333,
+      "VP": 12,
+      "FP": 6,
+      "FN": 8
+     },
+     "híbrido A (Semgrep ou SonarQube com hotspots, ou LLM filtrado)": {
+      "Precisao": 0.6842105263157895,
+      "Recall": 0.65,
+      "F1-Score": 0.6666666666666666,
+      "FP Rate": 0.3157894736842105,
+      "VP": 13,
+      "FP": 6,
+      "FN": 7
+     },
+     "híbrido B (Semgrep ou SonarQube só vulnerabilities, ou LLM filtrado)": {
+      "Precisao": 0.6842105263157895,
+      "Recall": 0.65,
+      "F1-Score": 0.6666666666666666,
+      "FP Rate": 0.3157894736842105,
+      "VP": 13,
+      "FP": 6,
+      "FN": 7
+     }
+    },
+    "sast_ref": {
+     "SAST A": {
+      "Precisao": 0.8,
+      "Recall": 0.4,
+      "F1-Score": 0.5333333333333333,
+      "FP Rate": 0.2,
+      "VP": 8,
+      "FP": 2,
+      "FN": 12
+     },
+     "SAST B": {
+      "Precisao": 1.0,
+      "Recall": 0.3,
+      "F1-Score": 0.46153846153846156,
+      "FP Rate": 0.0,
+      "VP": 6,
+      "FP": 0,
+      "FN": 14
+     }
+    },
+    "rej_F1": 10,
+    "rej_F2": 1,
+    "t3": {
+     "VULN": {
+      "Exposição de dados": 9,
+      "Redirecionamento": 7,
+      "Autenticação": 10,
+      "Validação de entrada": 8,
+      "Controle de acesso": 11,
+      "XSS": 9,
+      "Injeção (SQL/NoSQL/código)": 10,
+      "CSRF": 4,
+      "Upload/caminho de arquivo": 3
+     },
+     "SAFE": {
+      "XSS": 4,
+      "Exposição de dados": 5,
+      "Controle de acesso": 5,
+      "Validação de entrada": 2,
+      "Injeção (SQL/NoSQL/código)": 4,
+      "CSRF": 2,
+      "Redirecionamento": 3,
+      "Autenticação": 3
+     }
+    },
+    "confere": 8,
+    "confere_de": 10,
+    "tipos_conf": 35,
+    "tipos_medios": 3.5357142857142856,
+    "so_sql_sem_sql": 11,
+    "cita_sql": 14,
+    "conf_por_arquivo": {
+     "search-result.component.ts": true,
+     "login.ts": true,
+     "search.ts": true,
+     "updateProductReviews.ts": true,
+     "app.routing.ts": true,
+     "server.ts": false,
+     "profileImageUrlUpload.ts": false,
+     "updateUserProfile.ts": true,
+     "basketItems.ts": true,
+     "deluxe.ts": true
+    },
+    "flag": [
+     "2fa.ts",
+     "accessLogDisclosureChallenge_1_correct.ts",
+     "app.routing.ts",
+     "b2bOrder.ts",
+     "basketItems.ts",
+     "changePassword.ts",
+     "changeProductChallenge_3_correct.ts",
+     "chatbotGreedyInjectionChallenge_2_correct.ts",
+     "chatbotPromptInjectionChallenge_2_correct.ts",
+     "dataErasure.ts",
+     "dbSchemaChallenge_2_correct.ts",
+     "deluxe.ts",
+     "directoryListingChallenge_1_correct.ts",
+     "fileServer.ts",
+     "insecurity.ts",
+     "localXssChallenge_2_correct.ts",
+     "login.ts",
+     "noSqlReviewsChallenge_3_correct.ts",
+     "profileImageUrlUpload.ts",
+     "redirect.ts",
+     "redirectChallenge_4_correct.ts",
+     "redirectCryptoCurrencyChallenge_3_correct.ts",
+     "resetPassword.ts",
+     "search-result.component.ts",
+     "search.ts",
+     "trackOrder.ts",
+     "updateProductReviews.ts",
+     "updateUserProfile.ts"
+    ],
+    "rel": {
+     "2fa.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Redirecionamento",
+      "Validação de entrada"
+     ],
+     "app.routing.ts": [
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "b2bOrder.ts": [],
+     "basketItems.ts": [
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Upload/caminho de arquivo",
+      "XSS"
+     ],
+     "changePassword.ts": [
+      "Autenticação",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "dataErasure.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "deluxe.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "Validação de entrada"
+     ],
+     "fileServer.ts": [
+      "Autenticação",
+      "Exposição de dados",
+      "Redirecionamento",
+      "Upload/caminho de arquivo",
+      "Validação de entrada"
+     ],
+     "fileUpload.ts": [],
+     "insecurity.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "login.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "profileImageUrlUpload.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Redirecionamento",
+      "Upload/caminho de arquivo",
+      "XSS"
+     ],
+     "redirect.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Redirecionamento",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "resetPassword.ts": [
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "search-result.component.ts": [
+      "XSS"
+     ],
+     "search.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "server.ts": [],
+     "trackOrder.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "updateProductReviews.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "updateUserProfile.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados"
+     ],
+     "accessLogDisclosureChallenge_1_correct.ts": [
+      "XSS"
+     ],
+     "changeProductChallenge_3_correct.ts": [
+      "Controle de acesso",
+      "Exposição de dados"
+     ],
+     "chatbotGreedyInjectionChallenge_2_correct.ts": [
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "chatbotPromptInjectionChallenge_2_correct.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "dbSchemaChallenge_2_correct.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "directoryListingChallenge_1_correct.ts": [
+      "Exposição de dados"
+     ],
+     "localXssChallenge_2_correct.ts": [
+      "XSS"
+     ],
+     "noSqlReviewsChallenge_3_correct.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "redirectChallenge_4_correct.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Redirecionamento"
+     ],
+     "redirectCryptoCurrencyChallenge_3_correct.ts": [
+      "Redirecionamento"
+     ]
+    }
+   }
+  },
+  {
+   "deepseek": {
+    "n_resp": 30,
+    "timeouts": 0,
+    "marcados": 25,
+    "safe_marcados": 9,
+    "n_safe_resp": 10,
+    "json_valido": 10,
+    "json_contraditorio": 0,
+    "metricas": {
+     "Precisao": 0.64,
+     "Recall": 0.8,
+     "F1-Score": 0.7111111111111111,
+     "FP Rate": 0.36,
+     "VP": 16,
+     "FP": 9,
+     "FN": 4
+    },
+    "cfg": {
+     "sem filtro": {
+      "Precisao": 0.64,
+      "Recall": 0.8,
+      "F1-Score": 0.7111111111111111,
+      "FP Rate": 0.36,
+      "VP": 16,
+      "FP": 9,
+      "FN": 4
+     },
+     "filtrado": {
+      "Precisao": 0.8181818181818182,
+      "Recall": 0.45,
+      "F1-Score": 0.5806451612903226,
+      "FP Rate": 0.18181818181818182,
+      "VP": 9,
+      "FP": 2,
+      "FN": 11
+     },
+     "híbrido A (Semgrep ou SonarQube com hotspots, ou LLM filtrado)": {
+      "Precisao": 0.8333333333333334,
+      "Recall": 0.75,
+      "F1-Score": 0.7894736842105263,
+      "FP Rate": 0.16666666666666666,
+      "VP": 15,
+      "FP": 3,
+      "FN": 5
+     },
+     "híbrido B (Semgrep ou SonarQube só vulnerabilities, ou LLM filtrado)": {
+      "Precisao": 0.875,
+      "Recall": 0.7,
+      "F1-Score": 0.7777777777777778,
+      "FP Rate": 0.125,
+      "VP": 14,
+      "FP": 2,
+      "FN": 6
+     }
+    },
+    "sast_ref": {
+     "SAST A": {
+      "Precisao": 0.8,
+      "Recall": 0.4,
+      "F1-Score": 0.5333333333333333,
+      "FP Rate": 0.2,
+      "VP": 8,
+      "FP": 2,
+      "FN": 12
+     },
+     "SAST B": {
+      "Precisao": 1.0,
+      "Recall": 0.3,
+      "F1-Score": 0.46153846153846156,
+      "FP Rate": 0.0,
+      "VP": 6,
+      "FP": 0,
+      "FN": 14
+     }
+    },
+    "rej_F1": 14,
+    "rej_F2": 1,
+    "t3": {
+     "VULN": {
+      "Autenticação": 10,
+      "Controle de acesso": 6,
+      "Exposição de dados": 3,
+      "Validação de entrada": 5,
+      "Injeção (SQL/NoSQL/código)": 7,
+      "CSRF": 3,
+      "XSS": 5,
+      "Redirecionamento": 1
+     },
+     "SAFE": {
+      "Controle de acesso": 2,
+      "Injeção (SQL/NoSQL/código)": 2,
+      "Validação de entrada": 2,
+      "Autenticação": 1,
+      "Redirecionamento": 1
+     }
+    },
+    "confere": 5,
+    "confere_de": 10,
+    "tipos_conf": 17,
+    "tipos_medios": 1.92,
+    "so_sql_sem_sql": 8,
+    "cita_sql": 9,
+    "conf_por_arquivo": {
+     "search-result.component.ts": true,
+     "login.ts": false,
+     "search.ts": true,
+     "updateProductReviews.ts": false,
+     "app.routing.ts": true,
+     "server.ts": false,
+     "profileImageUrlUpload.ts": false,
+     "updateUserProfile.ts": true,
+     "basketItems.ts": false,
+     "deluxe.ts": true
+    },
+    "flag": [
+     "2fa.ts",
+     "accessLogDisclosureChallenge_1_correct.ts",
+     "app.routing.ts",
+     "b2bOrder.ts",
+     "basketItems.ts",
+     "changePassword.ts",
+     "changeProductChallenge_3_correct.ts",
+     "chatbotGreedyInjectionChallenge_2_correct.ts",
+     "dataErasure.ts",
+     "dbSchemaChallenge_2_correct.ts",
+     "deluxe.ts",
+     "directoryListingChallenge_1_correct.ts",
+     "fileServer.ts",
+     "insecurity.ts",
+     "localXssChallenge_2_correct.ts",
+     "login.ts",
+     "noSqlReviewsChallenge_3_correct.ts",
+     "redirect.ts",
+     "redirectChallenge_4_correct.ts",
+     "redirectCryptoCurrencyChallenge_3_correct.ts",
+     "resetPassword.ts",
+     "search-result.component.ts",
+     "search.ts",
+     "trackOrder.ts",
+     "updateUserProfile.ts"
+    ],
+    "rel": {
+     "2fa.ts": [
+      "Autenticação"
+     ],
+     "app.routing.ts": [
+      "Controle de acesso"
+     ],
+     "b2bOrder.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados"
+     ],
+     "basketItems.ts": [
+      "Autenticação",
+      "Validação de entrada"
+     ],
+     "changePassword.ts": [
+      "Autenticação",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "dataErasure.ts": [
+      "Autenticação"
+     ],
+     "deluxe.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "fileServer.ts": [
+      "Autenticação",
+      "Controle de acesso"
+     ],
+     "fileUpload.ts": [],
+     "insecurity.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "login.ts": [
+      "Autenticação"
+     ],
+     "profileImageUrlUpload.ts": [],
+     "redirect.ts": [
+      "Redirecionamento",
+      "Validação de entrada"
+     ],
+     "resetPassword.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "search-result.component.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "search.ts": [
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "server.ts": [],
+     "trackOrder.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "updateProductReviews.ts": [],
+     "updateUserProfile.ts": [
+      "CSRF"
+     ],
+     "accessLogDisclosureChallenge_1_correct.ts": [],
+     "changeProductChallenge_3_correct.ts": [
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "chatbotGreedyInjectionChallenge_2_correct.ts": [
+      "Controle de acesso",
+      "Validação de entrada"
+     ],
+     "chatbotPromptInjectionChallenge_2_correct.ts": [],
+     "dbSchemaChallenge_2_correct.ts": [],
+     "directoryListingChallenge_1_correct.ts": [],
+     "localXssChallenge_2_correct.ts": [],
+     "noSqlReviewsChallenge_3_correct.ts": [
+      "Autenticação",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "redirectChallenge_4_correct.ts": [],
+     "redirectCryptoCurrencyChallenge_3_correct.ts": [
+      "Redirecionamento"
+     ]
+    }
+   },
+   "codellama": {
+    "n_resp": 27,
+    "timeouts": 3,
+    "marcados": 25,
+    "safe_marcados": 8,
+    "n_safe_resp": 9,
+    "json_valido": 3,
+    "json_contraditorio": 0,
+    "metricas": {
+     "Precisao": 0.68,
+     "Recall": 0.9444444444444444,
+     "F1-Score": 0.7906976744186046,
+     "FP Rate": 0.32,
+     "VP": 17,
+     "FP": 8,
+     "FN": 1
+    },
+    "cfg": {
+     "sem filtro": {
+      "Precisao": 0.68,
+      "Recall": 0.9444444444444444,
+      "F1-Score": 0.7906976744186046,
+      "FP Rate": 0.32,
+      "VP": 17,
+      "FP": 8,
+      "FN": 1
+     },
+     "filtrado": {
+      "Precisao": 0.7,
+      "Recall": 0.7777777777777778,
+      "F1-Score": 0.7368421052631579,
+      "FP Rate": 0.3,
+      "VP": 14,
+      "FP": 6,
+      "FN": 4
+     },
+     "híbrido A (Semgrep ou SonarQube com hotspots, ou LLM filtrado)": {
+      "Precisao": 0.6956521739130435,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.7804878048780488,
+      "FP Rate": 0.30434782608695654,
+      "VP": 16,
+      "FP": 7,
+      "FN": 2
+     },
+     "híbrido B (Semgrep ou SonarQube só vulnerabilities, ou LLM filtrado)": {
+      "Precisao": 0.7272727272727273,
+      "Recall": 0.8888888888888888,
+      "F1-Score": 0.8,
+      "FP Rate": 0.2727272727272727,
+      "VP": 16,
+      "FP": 6,
+      "FN": 2
+     }
+    },
+    "sast_ref": {
+     "SAST A": {
+      "Precisao": 0.7777777777777778,
+      "Recall": 0.3888888888888889,
+      "F1-Score": 0.5185185185185185,
+      "FP Rate": 0.2222222222222222,
+      "VP": 7,
+      "FP": 2,
+      "FN": 11
+     },
+     "SAST B": {
+      "Precisao": 1.0,
+      "Recall": 0.2777777777777778,
+      "F1-Score": 0.43478260869565216,
+      "FP Rate": 0.0,
+      "VP": 5,
+      "FP": 0,
+      "FN": 13
+     }
+    },
+    "rej_F1": 3,
+    "rej_F2": 2,
+    "t3": {
+     "VULN": {
+      "Autenticação": 5,
+      "CSRF": 5,
+      "XSS": 10,
+      "Controle de acesso": 5,
+      "Injeção (SQL/NoSQL/código)": 11,
+      "Exposição de dados": 8,
+      "Validação de entrada": 7,
+      "Redirecionamento": 3,
+      "Upload/caminho de arquivo": 1
+     },
+     "SAFE": {
+      "Exposição de dados": 5,
+      "CSRF": 2,
+      "Redirecionamento": 3,
+      "Autenticação": 2,
+      "Validação de entrada": 3,
+      "Controle de acesso": 3,
+      "Injeção (SQL/NoSQL/código)": 7,
+      "XSS": 5,
+      "Upload/caminho de arquivo": 2
+     }
+    },
+    "confere": 7,
+    "confere_de": 9,
+    "tipos_conf": 31,
+    "tipos_medios": 3.48,
+    "so_sql_sem_sql": 15,
+    "cita_sql": 18,
+    "conf_por_arquivo": {
+     "search-result.component.ts": true,
+     "login.ts": true,
+     "search.ts": true,
+     "updateProductReviews.ts": true,
+     "app.routing.ts": false,
+     "profileImageUrlUpload.ts": false,
+     "updateUserProfile.ts": true,
+     "basketItems.ts": true,
+     "deluxe.ts": true
+    },
+    "flag": [
+     "2fa.ts",
+     "b2bOrder.ts",
+     "basketItems.ts",
+     "changePassword.ts",
+     "changeProductChallenge_3_correct.ts",
+     "chatbotGreedyInjectionChallenge_2_correct.ts",
+     "chatbotPromptInjectionChallenge_2_correct.ts",
+     "dataErasure.ts",
+     "dbSchemaChallenge_2_correct.ts",
+     "deluxe.ts",
+     "directoryListingChallenge_1_correct.ts",
+     "fileServer.ts",
+     "insecurity.ts",
+     "localXssChallenge_2_correct.ts",
+     "login.ts",
+     "noSqlReviewsChallenge_3_correct.ts",
+     "profileImageUrlUpload.ts",
+     "redirect.ts",
+     "redirectChallenge_4_correct.ts",
+     "resetPassword.ts",
+     "search-result.component.ts",
+     "search.ts",
+     "trackOrder.ts",
+     "updateProductReviews.ts",
+     "updateUserProfile.ts"
+    ],
+    "rel": {
+     "2fa.ts": [
+      "Autenticação"
+     ],
+     "app.routing.ts": [],
+     "b2bOrder.ts": [],
+     "basketItems.ts": [
+      "CSRF",
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "changePassword.ts": [
+      "Autenticação",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)"
+     ],
+     "dataErasure.ts": [
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "deluxe.ts": [
+      "Autenticação",
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "fileServer.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "insecurity.ts": [
+      "Controle de acesso",
+      "Redirecionamento",
+      "Validação de entrada"
+     ],
+     "login.ts": [
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "profileImageUrlUpload.ts": [
+      "Upload/caminho de arquivo",
+      "Validação de entrada"
+     ],
+     "redirect.ts": [
+      "Controle de acesso",
+      "Redirecionamento",
+      "Validação de entrada"
+     ],
+     "resetPassword.ts": [
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "search-result.component.ts": [
+      "Exposição de dados",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "search.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "trackOrder.ts": [
+      "Autenticação",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "updateProductReviews.ts": [
+      "CSRF",
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "updateUserProfile.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "changeProductChallenge_3_correct.ts": [
+      "Autenticação",
+      "CSRF",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Redirecionamento",
+      "Validação de entrada"
+     ],
+     "chatbotGreedyInjectionChallenge_2_correct.ts": [
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada"
+     ],
+     "chatbotPromptInjectionChallenge_2_correct.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "dbSchemaChallenge_2_correct.ts": [
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Upload/caminho de arquivo"
+     ],
+     "directoryListingChallenge_1_correct.ts": [
+      "Autenticação",
+      "Controle de acesso",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "Upload/caminho de arquivo",
+      "XSS"
+     ],
+     "localXssChallenge_2_correct.ts": [
+      "Injeção (SQL/NoSQL/código)",
+      "XSS"
+     ],
+     "noSqlReviewsChallenge_3_correct.ts": [
+      "CSRF",
+      "Exposição de dados",
+      "Injeção (SQL/NoSQL/código)",
+      "Validação de entrada",
+      "XSS"
+     ],
+     "redirectChallenge_4_correct.ts": [
+      "Controle de acesso",
+      "Injeção (SQL/NoSQL/código)",
+      "Redirecionamento",
+      "XSS"
+     ],
+     "redirectCryptoCurrencyChallenge_3_correct.ts": []
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,2831 @@
+[
+  {
+    "key": "30770d4b-0531-4605-ac62-768ed0808386",
+    "rule": "typescript:S1854",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:SAFE/dbSchemaChallenge_2_correct.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 9,
+    "hash": "f92b69d3842ae36ad96c4ccdbb4e85e3",
+    "textRange": {
+      "startLine": 9,
+      "endLine": 9,
+      "startOffset": 14,
+      "endOffset": 24
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Remove this useless assignment to variable \"dataString\".",
+    "effort": "1min",
+    "debt": "1min",
+    "author": "",
+    "tags": [
+      "cwe",
+      "unused"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "LOGICAL",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "63457f0c-b8a2-4960-8386-f6f384adc576",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:SAFE/dbSchemaChallenge_2_correct.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 10,
+    "hash": "74e5e396bb700fdeb01927f677ddadfc",
+    "textRange": {
+      "startLine": 10,
+      "endLine": 13,
+      "startOffset": 8,
+      "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "6205b9dd-15e5-4733-851a-75b8dafc3898",
+    "rule": "typescript:S1854",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:SAFE/noSqlReviewsChallenge_3_correct.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 3,
+    "hash": "ac4b32453f93d4f00370e9db763c4e3b",
+    "textRange": {
+      "startLine": 3,
+      "endLine": 3,
+      "startOffset": 10,
+      "endOffset": 14
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Remove this useless assignment to variable \"user\".",
+    "effort": "1min",
+    "debt": "1min",
+    "author": "",
+    "tags": [
+      "cwe",
+      "unused"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "LOGICAL",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "c8ca7942-b8d7-445b-940f-d9bc3c3de5d4",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/2fa.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 43,
+    "hash": "5230df385c485bb3895ec58d7938c2fb",
+    "textRange": {
+      "startLine": 43,
+      "endLine": 43,
+      "startOffset": 24,
+      "endOffset": 29
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "c2b44f24-a319-4262-a97b-98af7f86e0d9",
+    "rule": "typescript:S2486",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/2fa.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 48,
+    "hash": "161b8313784081f5965c2da97df48970",
+    "textRange": {
+      "startLine": 48,
+      "endLine": 50,
+      "startOffset": 4,
+      "endOffset": 3
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Handle this exception or don't catch it at all.",
+    "effort": "1h",
+    "debt": "1h",
+    "author": "",
+    "tags": [
+      "cwe",
+      "error-handling",
+      "suspicious"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "f21e68f5-154a-4d3d-a1c7-17e0e460d101",
+    "rule": "typescript:S2486",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/2fa.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 83,
+    "hash": "161b8313784081f5965c2da97df48970",
+    "textRange": {
+      "startLine": 83,
+      "endLine": 85,
+      "startOffset": 4,
+      "endOffset": 3
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Handle this exception or don't catch it at all.",
+    "effort": "1h",
+    "debt": "1h",
+    "author": "",
+    "tags": [
+      "cwe",
+      "error-handling",
+      "suspicious"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "f4fd9ae1-50e0-401c-b36c-863354f6335e",
+    "rule": "typescript:S2486",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/2fa.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 134,
+    "hash": "161b8313784081f5965c2da97df48970",
+    "textRange": {
+      "startLine": 134,
+      "endLine": 136,
+      "startOffset": 4,
+      "endOffset": 3
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Handle this exception or don't catch it at all.",
+    "effort": "1h",
+    "debt": "1h",
+    "author": "",
+    "tags": [
+      "cwe",
+      "error-handling",
+      "suspicious"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "a6b4f6a4-dba2-4555-9198-cfab9b684eaa",
+    "rule": "typescript:S2486",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/2fa.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 167,
+    "hash": "161b8313784081f5965c2da97df48970",
+    "textRange": {
+      "startLine": 167,
+      "endLine": 169,
+      "startOffset": 4,
+      "endOffset": 3
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Handle this exception or don't catch it at all.",
+    "effort": "1h",
+    "debt": "1h",
+    "author": "",
+    "tags": [
+      "cwe",
+      "error-handling",
+      "suspicious"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "f57b4e90-6715-4d93-ad9c-b38916bc8d50",
+    "rule": "typescript:S1874",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/app.routing.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 263,
+    "hash": "fed88b1d804505e444a027b1ed99c5fa",
+    "textRange": {
+      "startLine": 263,
+      "endLine": 263,
+      "startOffset": 43,
+      "endOffset": 49
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "'(from: number, length?: number): string' is deprecated.",
+    "effort": "15min",
+    "debt": "15min",
+    "author": "",
+    "tags": [
+      "cwe",
+      "type-dependent",
+      "obsolete"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "aa55f819-82e1-4815-b081-c5e06e78cb85",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/b2bOrder.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 8,
+    "hash": "04d28e433bb76ee7d557805d0c6ba0b0",
+    "textRange": {
+      "startLine": 8,
+      "endLine": 8,
+      "startOffset": 20,
+      "endOffset": 25
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "ec19379d-22c6-4605-955d-e3aa120ee1e2",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/b2bOrder.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 19,
+    "hash": "999b3c33469f65e19fdc9bb85dcae5bd",
+    "textRange": {
+      "startLine": 19,
+      "endLine": 19,
+      "startOffset": 49,
+      "endOffset": 51
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "9762224a-920c-4b9a-b474-7b3dabbb9455",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/basketItems.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 26,
+    "hash": "c2bd0dac396d10d0a8d6c9ca2b19e6be",
+    "textRange": {
+      "startLine": 26,
+      "endLine": 34,
+      "startOffset": 4,
+      "endOffset": 5
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "1bac0023-128c-42c0-9e2c-5cb25e8ce413",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/dataErasure.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 49,
+    "hash": "99daf344d06a840a428ac4a22915a3b2",
+    "textRange": {
+      "startLine": 49,
+      "endLine": 49,
+      "startOffset": 37,
+      "endOffset": 39
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "9c3ce410-6074-4f4f-8d74-b207ba51a1f8",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/dataErasure.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 91,
+    "hash": "99daf344d06a840a428ac4a22915a3b2",
+    "textRange": {
+      "startLine": 91,
+      "endLine": 91,
+      "startOffset": 37,
+      "endOffset": 39
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "5395344b-e57a-4150-9e0a-9670f3c41ca4",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/dataErasure.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 105,
+    "hash": "f8dda80383d7b4968e16a81a25aab5f5",
+    "textRange": {
+      "startLine": 105,
+      "endLine": 105,
+      "startOffset": 67,
+      "endOffset": 69
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "9b37e7e1-fe11-41f0-9569-b2460bc9f4e2",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/dataErasure.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 105,
+    "hash": "f8dda80383d7b4968e16a81a25aab5f5",
+    "textRange": {
+      "startLine": 105,
+      "endLine": 105,
+      "startOffset": 99,
+      "endOffset": 101
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "b7ca3d91-19dc-49d9-945c-cfbaacdfd659",
+    "rule": "typescript:S2486",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/deluxe.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 51,
+    "hash": "161b8313784081f5965c2da97df48970",
+    "textRange": {
+      "startLine": 51,
+      "endLine": 53,
+      "startOffset": 8,
+      "endOffset": 7
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Handle this exception or don't catch it at all.",
+    "effort": "1h",
+    "debt": "1h",
+    "author": "",
+    "tags": [
+      "cwe",
+      "error-handling",
+      "suspicious"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "459c45fd-3e39-4011-9066-ac19d686dee5",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileServer.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 46,
+    "hash": "4cfd12eeba5f78c9c1389009ae751484",
+    "textRange": {
+      "startLine": 46,
+      "endLine": 46,
+      "startOffset": 58,
+      "endOffset": 60
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "4f036069-a3bd-4ef4-b107-90e5a8ea68d6",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileServer.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 46,
+    "hash": "4cfd12eeba5f78c9c1389009ae751484",
+    "textRange": {
+      "startLine": 46,
+      "endLine": 46,
+      "startOffset": 107,
+      "endOffset": 109
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "83228fe1-dba7-440e-8450-b292d761e3f7",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileServer.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 46,
+    "hash": "4cfd12eeba5f78c9c1389009ae751484",
+    "textRange": {
+      "startLine": 46,
+      "endLine": 46,
+      "startOffset": 153,
+      "endOffset": 155
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "3d1f21dc-877a-434c-9384-b6f62cafbe14",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileServer.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 47,
+    "hash": "af387dd100caead3659cdc53d77ab42a",
+    "textRange": {
+      "startLine": 47,
+      "endLine": 47,
+      "startOffset": 58,
+      "endOffset": 60
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "36cce344-ba70-4966-8d70-7a28978f5588",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileServer.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 52,
+    "hash": "ef87fefc8179e913c789e956d2fc5b61",
+    "textRange": {
+      "startLine": 52,
+      "endLine": 52,
+      "startOffset": 33,
+      "endOffset": 35
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "0997e105-5611-45a7-850f-bf0969ff7fb8",
+    "rule": "typescript:S3776",
+    "severity": "CRITICAL",
+    "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 70,
+    "hash": "ae9b7619782275285c1f19cd11b60404",
+    "textRange": {
+      "startLine": 70,
+      "endLine": 70,
+      "startOffset": 15,
+      "endOffset": 30
+    },
+    "flows": [
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 71,
+              "endLine": 71,
+              "startOffset": 2,
+              "endOffset": 4
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 73,
+              "endLine": 73,
+              "startOffset": 4,
+              "endOffset": 6
+            },
+            "msg": "+2 (incl. 1 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 93,
+              "endLine": 93,
+              "startOffset": 6,
+              "endOffset": 10
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 73,
+              "endLine": 73,
+              "startOffset": 31,
+              "endOffset": 32
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 80,
+              "endLine": 80,
+              "startOffset": 8,
+              "endOffset": 13
+            },
+            "msg": "+3 (incl. 2 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 81,
+              "endLine": 81,
+              "startOffset": 50,
+              "endOffset": 51
+            },
+            "msg": "+4 (incl. 3 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 82,
+              "endLine": 82,
+              "startOffset": 8,
+              "endOffset": 10
+            },
+            "msg": "+4 (incl. 3 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 88,
+              "endLine": 88,
+              "startOffset": 10,
+              "endOffset": 14
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 83,
+              "endLine": 83,
+              "startOffset": 10,
+              "endOffset": 12
+            },
+            "msg": "+5 (incl. 4 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      }
+    ],
+    "status": "OPEN",
+    "message": "Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+    "effort": "12min",
+    "debt": "12min",
+    "author": "",
+    "tags": [
+      "brain-overload"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FOCUSED",
+    "cleanCodeAttributeCategory": "ADAPTABLE",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "HIGH"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "391e6e38-b8ea-40be-9c69-17b3f00d77d9",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 77,
+    "hash": "cf70ed53fbf9abc5fbeaad460fd824a3",
+    "textRange": {
+      "startLine": 77,
+      "endLine": 77,
+      "startOffset": 124,
+      "endOffset": 126
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "c295acb6-f4df-4d3a-abf0-ea4841e523be",
+    "rule": "typescript:S6551",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 81,
+    "hash": "20f50ccb9ac9cd8f2a9f40422e3b0deb",
+    "textRange": {
+      "startLine": 81,
+      "endLine": 81,
+      "startOffset": 73,
+      "endOffset": 76
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "'err' will use Object's default stringification format ('[object Object]') when stringified.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "string",
+      "type-dependent",
+      "object"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "LOGICAL",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "863469eb-703d-4a46-9e8b-97aa56f61af5",
+    "rule": "typescript:S3776",
+    "severity": "CRITICAL",
+    "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 101,
+    "hash": "ae68b16e8b4fc22d4415e339eb2b5d93",
+    "textRange": {
+      "startLine": 101,
+      "endLine": 101,
+      "startOffset": 9,
+      "endOffset": 25
+    },
+    "flows": [
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 102,
+              "endLine": 102,
+              "startOffset": 2,
+              "endOffset": 4
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 104,
+              "endLine": 104,
+              "startOffset": 4,
+              "endOffset": 6
+            },
+            "msg": "+2 (incl. 1 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 125,
+              "endLine": 125,
+              "startOffset": 6,
+              "endOffset": 10
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 104,
+              "endLine": 104,
+              "startOffset": 31,
+              "endOffset": 32
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 112,
+              "endLine": 112,
+              "startOffset": 8,
+              "endOffset": 13
+            },
+            "msg": "+3 (incl. 2 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 113,
+              "endLine": 113,
+              "startOffset": 50,
+              "endOffset": 51
+            },
+            "msg": "+4 (incl. 3 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 114,
+              "endLine": 114,
+              "startOffset": 8,
+              "endOffset": 10
+            },
+            "msg": "+4 (incl. 3 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 120,
+              "endLine": 120,
+              "startOffset": 10,
+              "endOffset": 14
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+            "textRange": {
+              "startLine": 115,
+              "endLine": 115,
+              "startOffset": 10,
+              "endOffset": 12
+            },
+            "msg": "+5 (incl. 4 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      }
+    ],
+    "status": "OPEN",
+    "message": "Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+    "effort": "12min",
+    "debt": "12min",
+    "author": "",
+    "tags": [
+      "brain-overload"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FOCUSED",
+    "cleanCodeAttributeCategory": "ADAPTABLE",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "HIGH"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "cf541df1-89e4-42b9-8021-17f15cb9abea",
+    "rule": "typescript:S6551",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/fileUpload.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 113,
+    "hash": "20f50ccb9ac9cd8f2a9f40422e3b0deb",
+    "textRange": {
+      "startLine": 113,
+      "endLine": 113,
+      "startOffset": 73,
+      "endOffset": 76
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "'err' will use Object's default stringification format ('[object Object]') when stringified.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "string",
+      "type-dependent",
+      "object"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "LOGICAL",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "e8c04746-a61b-49da-985f-686bd27cb43f",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 17,
+    "hash": "ee9c899990c4e83a68e9cadd11483697",
+    "textRange": {
+      "startLine": 17,
+      "endLine": 17,
+      "startOffset": 20,
+      "endOffset": 25
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "0368ed86-7597-41e6-9103-f2ce3c37064a",
+    "rule": "secrets:S6706",
+    "severity": "BLOCKER",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 21,
+    "hash": "648b1c2b0817f9c92f0cadebbe3e4bdf",
+    "textRange": {
+      "startLine": 21,
+      "endLine": 21,
+      "startOffset": 20,
+      "endOffset": 51
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Make sure this private key gets revoked, changed, and removed from the code.",
+    "effort": "30min",
+    "debt": "30min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "VULNERABILITY",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "TRUSTWORTHY",
+    "cleanCodeAttributeCategory": "RESPONSIBLE",
+    "impacts": [
+      {
+        "softwareQuality": "SECURITY",
+        "severity": "BLOCKER"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "04cdd9e8-b9e3-4d3b-ba20-4e283df503f3",
+    "rule": "typescript:S6397",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 59,
+    "hash": "a8ba6d2799cfc02466fbaa58148273e9",
+    "textRange": {
+      "startLine": 59,
+      "endLine": 59,
+      "startOffset": 73,
+      "endOffset": 77
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Replace this character class by the character itself.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "regex",
+      "type-dependent"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "7f6e543c-23a4-49c5-ac44-6785f5fc6b56",
+    "rule": "typescript:S6353",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 118,
+    "hash": "c8f74bad08483af5d8c5657244c7c7c6",
+    "textRange": {
+      "startLine": 118,
+      "endLine": 118,
+      "startOffset": 81,
+      "endOffset": 86
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Use concise character class syntax '\\d' instead of '[0-9]'.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "regex",
+      "type-dependent"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "b0ad613a-6e4a-43dd-8e9b-142d958af86b",
+    "rule": "typescript:S6353",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 118,
+    "hash": "c8f74bad08483af5d8c5657244c7c7c6",
+    "textRange": {
+      "startLine": 118,
+      "endLine": 118,
+      "startOffset": 72,
+      "endOffset": 77
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Use concise character class syntax '\\d' instead of '[0-9]'.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "regex",
+      "type-dependent"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "f7216926-2fcf-4e49-afa8-86a638d5bab9",
+    "rule": "typescript:S6594",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 118,
+    "hash": "c8f74bad08483af5d8c5657244c7c7c6",
+    "textRange": {
+      "startLine": 118,
+      "endLine": 118,
+      "startOffset": 16,
+      "endOffset": 21
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Use the \"RegExp.exec()\" method instead.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "regex",
+      "type-dependent"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "EFFICIENT",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "599bb530-1c95-4475-8450-32d583321137",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/insecurity.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 187,
+    "hash": "e614b88b7e9b9fb9693220f08753b4c1",
+    "textRange": {
+      "startLine": 187,
+      "endLine": 187,
+      "startOffset": 34,
+      "endOffset": 36
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "da64847a-df62-4945-bdfa-cf9a488801cc",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/login.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 34,
+    "hash": "ca3b240da7128950ca832867db23cbb8",
+    "textRange": {
+      "startLine": 34,
+      "endLine": 34,
+      "startOffset": 80,
+      "endOffset": 82
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "fbf6e43d-5e87-455c-a975-c54826d9f534",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/login.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 34,
+    "hash": "ca3b240da7128950ca832867db23cbb8",
+    "textRange": {
+      "startLine": 34,
+      "endLine": 34,
+      "startOffset": 138,
+      "endOffset": 140
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??`) instead of a logical or (`||`), as it is a safer operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "b19e2c15-ea88-485e-ba20-45c4e2721ee9",
+    "rule": "typescript:S3776",
+    "severity": "CRITICAL",
+    "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 17,
+    "hash": "8603208895f43e1503cd0f5feb91b693",
+    "textRange": {
+      "startLine": 17,
+      "endLine": 17,
+      "startOffset": 65,
+      "endOffset": 67
+    },
+    "flows": [
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 18,
+              "endLine": 18,
+              "startOffset": 4,
+              "endOffset": 6
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 20,
+              "endLine": 20,
+              "startOffset": 6,
+              "endOffset": 8
+            },
+            "msg": "+2 (incl. 1 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 22,
+              "endLine": 22,
+              "startOffset": 6,
+              "endOffset": 8
+            },
+            "msg": "+2 (incl. 1 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 43,
+              "endLine": 43,
+              "startOffset": 8,
+              "endOffset": 12
+            },
+            "msg": "+1",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 25,
+              "endLine": 25,
+              "startOffset": 10,
+              "endOffset": 12
+            },
+            "msg": "+3 (incl. 2 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 28,
+              "endLine": 28,
+              "startOffset": 111,
+              "endOffset": 112
+            },
+            "msg": "+3 (incl. 2 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 33,
+              "endLine": 33,
+              "startOffset": 10,
+              "endOffset": 15
+            },
+            "msg": "+3 (incl. 2 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      },
+      {
+        "locations": [
+          {
+            "component": "owasp-juice-shop-benchmark:VULN/profileImageUrlUpload.ts",
+            "textRange": {
+              "startLine": 38,
+              "endLine": 38,
+              "startOffset": 12,
+              "endOffset": 17
+            },
+            "msg": "+4 (incl. 3 for nesting)",
+            "msgFormattings": []
+          }
+        ]
+      }
+    ],
+    "status": "OPEN",
+    "message": "Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.",
+    "effort": "9min",
+    "debt": "9min",
+    "author": "",
+    "tags": [
+      "brain-overload"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "FOCUSED",
+    "cleanCodeAttributeCategory": "ADAPTABLE",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "HIGH"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "a165bed1-b6b8-40c0-9322-7a50c09f783e",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/resetPassword.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 67,
+    "hash": "0f299563aac9acb7fc6994998c49f2b0",
+    "textRange": {
+      "startLine": 67,
+      "endLine": 71,
+      "startOffset": 6,
+      "endOffset": 7
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "97069784-667b-408c-9a98-c9133c728b46",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/resetPassword.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 78,
+    "hash": "0f299563aac9acb7fc6994998c49f2b0",
+    "textRange": {
+      "startLine": 78,
+      "endLine": 82,
+      "startOffset": 6,
+      "endOffset": 7
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "4c215579-c540-4bbd-99a4-e35c65f3b060",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/search.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 31,
+    "hash": "d525f07e88fc94d4acabba5f202e046e",
+    "textRange": {
+      "startLine": 31,
+      "endLine": 36,
+      "startOffset": 14,
+      "endOffset": 15
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "96a6556d-4e3c-493c-be0c-cec63d0dbfb8",
+    "rule": "typescript:S3735",
+    "severity": "CRITICAL",
+    "component": "owasp-juice-shop-benchmark:VULN/search.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 47,
+    "hash": "da9ccb9c1f9e10e92d6f85bdaf2fb639",
+    "textRange": {
+      "startLine": 47,
+      "endLine": 47,
+      "startOffset": 10,
+      "endOffset": 14
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Remove this use of the \"void\" operator.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "confusing"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "HIGH"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "4740d1cf-c872-4813-8815-223661501566",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/search.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 50,
+    "hash": "ba194d2a2a817dfa4a7ea0c51492a74b",
+    "textRange": {
+      "startLine": 50,
+      "endLine": 57,
+      "startOffset": 14,
+      "endOffset": 15
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "b75c91cb-dafe-402a-bafd-50d117a15688",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/search.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 64,
+    "hash": "74e5e396bb700fdeb01927f677ddadfc",
+    "textRange": {
+      "startLine": 64,
+      "endLine": 67,
+      "startOffset": 8,
+      "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "5e7f062d-5a0f-4c0c-9abc-86e7736a20d9",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 19,
+    "hash": "6657e619dc7ae2f6e4b319013ea0c991",
+    "textRange": {
+      "startLine": 19,
+      "endLine": 19,
+      "startOffset": 20,
+      "endOffset": 25
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "4f530009-702d-4938-8b67-b20c49515824",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 22,
+    "hash": "c604d4bb6486311d12787235cb53f977",
+    "textRange": {
+      "startLine": 22,
+      "endLine": 22,
+      "startOffset": 20,
+      "endOffset": 25
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "b2f48b52-cc33-4ff6-8d39-43b0b30b37cb",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 29,
+    "hash": "c0b2a46bb0a19c8b53446f8e9a9f93e3",
+    "textRange": {
+      "startLine": 29,
+      "endLine": 29,
+      "startOffset": 20,
+      "endOffset": 25
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "71c9af45-834b-4e2b-9ebc-be17adac1500",
+    "rule": "typescript:S6397",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 204,
+    "hash": "b77abe7806f91ff8ef28a99ab7f4e952",
+    "textRange": {
+      "startLine": 204,
+      "endLine": 204,
+      "startOffset": 31,
+      "endOffset": 34
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Replace this character class by the character itself.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "regex",
+      "type-dependent"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "e39b1587-22c4-4356-bb59-fa495a1e63ff",
+    "rule": "typescript:S1874",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 219,
+    "hash": "141e01595761cd5dfb54f82530c87522",
+    "textRange": {
+      "startLine": 219,
+      "endLine": 219,
+      "startOffset": 91,
+      "endOffset": 97
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "The signature '(from: number, length?: number): string' of 'locale.key.substr' is deprecated.",
+    "effort": "15min",
+    "debt": "15min",
+    "author": "",
+    "tags": [
+      "cwe",
+      "type-dependent",
+      "obsolete"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "20041203-ac13-4c77-aa03-e496fb88b71f",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 243,
+    "hash": "a18a76e5ddbaf822cadeeb5866313e36",
+    "textRange": {
+      "startLine": 243,
+      "endLine": 243,
+      "startOffset": 24,
+      "endOffset": 29
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "5250be33-21db-4a1c-a3e1-a3c764c69c17",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 261,
+    "hash": "71af73216626080fa2e61503a11c878b",
+    "textRange": {
+      "startLine": 261,
+      "endLine": 261,
+      "startOffset": 26,
+      "endOffset": 31
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "57d98db6-3bfb-43d5-8cc4-07b645cd20a6",
+    "rule": "typescript:S1134",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 335,
+    "hash": "2249fe49ed7de1d347ac796edd10b8bc",
+    "textRange": {
+      "startLine": 335,
+      "endLine": 335,
+      "startOffset": 24,
+      "endOffset": 29
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Take the required action to fix the issue indicated by this comment.",
+    "effort": "0min",
+    "debt": "0min",
+    "author": "",
+    "tags": [
+      "cwe"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "COMPLETE",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "0b5bc324-8a4e-4289-bde5-a64b9392c32f",
+    "rule": "typescript:S6606",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 338,
+    "hash": "2ce0b9d8e69106b9d4cb527feca83786",
+    "textRange": {
+      "startLine": 338,
+      "endLine": 340,
+      "startOffset": 6,
+      "endOffset": 7
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Prefer using nullish coalescing operator (`??=`) instead of an assignment expression, as it is simpler to read.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "type-dependent",
+      "nullish-coalescing",
+      "es2020"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "acd1c346-6745-4c26-9e65-3a6b7e7ceba7",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 542,
+    "hash": "33d33ffca06cee96efb2a0abc164b2a0",
+    "textRange": {
+      "startLine": 542,
+      "endLine": 551,
+      "startOffset": 8,
+      "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "7e2ecb58-6462-4125-af43-e26dddf3f9d2",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 563,
+    "hash": "33d33ffca06cee96efb2a0abc164b2a0",
+    "textRange": {
+      "startLine": 563,
+      "endLine": 565,
+      "startOffset": 8,
+      "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "1c7e3b76-6b83-46df-a9f5-c51f70e890ee",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 577,
+    "hash": "33d33ffca06cee96efb2a0abc164b2a0",
+    "textRange": {
+      "startLine": 577,
+      "endLine": 579,
+      "startOffset": 8,
+      "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "2f4d99a9-d14a-4ee4-8916-563a59d2e86b",
+    "rule": "typescript:S4138",
+    "severity": "MINOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 591,
+    "hash": "33d33ffca06cee96efb2a0abc164b2a0",
+    "textRange": {
+      "startLine": 591,
+      "endLine": 594,
+      "startOffset": 8,
+      "endOffset": 9
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Expected a `for-of` loop instead of a `for` loop with this simple iteration.",
+    "effort": "5min",
+    "debt": "5min",
+    "author": "",
+    "tags": [
+      "clumsy"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": true,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CONVENTIONAL",
+    "cleanCodeAttributeCategory": "CONSISTENT",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "LOW"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "20b5be27-5891-4371-9237-6f0d7b86a6d1",
+    "rule": "typescript:S4624",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 765,
+    "hash": "d4cb080ca4a6b32b4a5cea5a6f9336eb",
+    "textRange": {
+      "startLine": 765,
+      "endLine": 765,
+      "startOffset": 68,
+      "endOffset": 77
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Refactor this code to not use nested template literals.",
+    "effort": "10min",
+    "debt": "10min",
+    "author": "",
+    "tags": [
+      "brain-overload",
+      "confusing"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  },
+  {
+    "key": "5e1e212a-4155-4e16-8cb5-25816610ec7d",
+    "rule": "typescript:S4624",
+    "severity": "MAJOR",
+    "component": "owasp-juice-shop-benchmark:VULN/server.ts",
+    "project": "owasp-juice-shop-benchmark",
+    "line": 768,
+    "hash": "f4b7ae2bef660d276f456841ef4e5f51",
+    "textRange": {
+      "startLine": 768,
+      "endLine": 768,
+      "startOffset": 74,
+      "endOffset": 100
+    },
+    "flows": [],
+    "status": "OPEN",
+    "message": "Refactor this code to not use nested template literals.",
+    "effort": "10min",
+    "debt": "10min",
+    "author": "",
+    "tags": [
+      "brain-overload",
+      "confusing"
+    ],
+    "creationDate": "2026-11-21T03:39:23+0000",
+    "updateDate": "2026-11-21T03:39:23+0000",
+    "type": "CODE_SMELL",
+    "scope": "MAIN",
+    "quickFixAvailable": false,
+    "messageFormattings": [],
+    "codeVariants": [],
+    "cleanCodeAttribute": "CLEAR",
+    "cleanCodeAttributeCategory": "INTENTIONAL",
+    "impacts": [
+      {
+        "softwareQuality": "MAINTAINABILITY",
+        "severity": "MEDIUM"
+      }
+    ],
+    "issueStatus": "OPEN",
+    "prioritizedRule": false
+  }
+]

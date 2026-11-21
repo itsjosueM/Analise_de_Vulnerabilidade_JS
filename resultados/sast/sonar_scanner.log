@@ -1,0 +1,134 @@
+03:39:19.570 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+03:39:19.573 INFO  Project root configuration file: NONE
+03:39:19.585 INFO  SonarScanner CLI 7.1.0.4889
+03:39:19.586 INFO  Java 17.0.14 Amazon.com Inc. (64-bit)
+03:39:19.586 INFO  Linux 7.0.0-1020-azure amd64
+03:39:19.608 INFO  User cache: /opt/sonar-scanner/.sonar/cache
+03:39:20.407 INFO  Communicating with SonarQube Community Build 25.5.0.107428
+03:39:20.408 INFO  JRE provisioning: os[linux], arch[x86_64]
+03:39:22.058 INFO  Starting SonarScanner Engine...
+03:39:22.058 INFO  Java 17.0.13 Eclipse Adoptium (64-bit)
+03:39:22.931 INFO  Load global settings
+03:39:22.992 INFO  Load global settings (done) | time=63ms
+03:39:22.995 INFO  Server id: 147B411E-AaH8Lz-aV4CWcQ0mbQGj
+03:39:23.003 INFO  Loading required plugins
+03:39:23.003 INFO  Load plugins index
+03:39:23.036 INFO  Load plugins index (done) | time=33ms
+03:39:23.037 INFO  Load/download plugins
+03:39:23.357 INFO  Load/download plugins (done) | time=320ms
+03:39:23.590 INFO  Process project properties
+03:39:23.600 INFO  Process project properties (done) | time=10ms
+03:39:23.609 INFO  Project key: owasp-juice-shop-benchmark
+03:39:23.609 INFO  Base dir: /usr/src
+03:39:23.611 INFO  Working dir: /tmp/.scannerwork
+03:39:23.613 INFO  Load project settings for component key: 'owasp-juice-shop-benchmark'
+03:39:23.641 INFO  Load quality profiles
+03:39:23.737 INFO  Load quality profiles (done) | time=96ms
+03:39:23.769 INFO  Load active rules
+03:39:24.052 INFO  Load active rules (done) | time=284ms
+03:39:24.059 INFO  Load analysis cache
+03:39:24.064 INFO  Load analysis cache (404) | time=5ms
+03:39:24.114 INFO  Preprocessing files...
+03:39:24.146 INFO  1 language detected in 30 preprocessed files
+03:39:24.148 INFO  0 files ignored because of inclusion/exclusion patterns
+03:39:24.148 INFO  Loading plugins for detected languages
+03:39:24.149 INFO  Load/download plugins
+03:39:25.351 INFO  Load/download plugins (done) | time=1203ms
+03:39:25.465 INFO  Load project repositories
+03:39:25.472 INFO  Load project repositories (done) | time=7ms
+03:39:25.484 INFO  Indexing files...
+03:39:25.485 INFO  Project configuration:
+03:39:25.486 INFO    Excluded sources: **/node_modules/**
+03:39:25.568 INFO  30 files indexed
+03:39:25.568 INFO  Quality profile for ts: Sonar way
+03:39:25.570 INFO  ------------- Run sensors on module owasp-juice-shop-benchmark
+03:39:25.593 INFO  Load metrics repository
+03:39:25.623 INFO  Load metrics repository (done) | time=30ms
+03:39:25.887 INFO  Sensor JaCoCo XML Report Importer [jacoco]
+03:39:25.887 INFO  'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+03:39:25.887 INFO  No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+03:39:25.888 INFO  Sensor JaCoCo XML Report Importer [jacoco] (done) | time=1ms
+03:39:25.888 INFO  Sensor Java Config Sensor [iac]
+03:39:25.905 INFO  0 source files to be analyzed
+03:39:25.913 INFO  0/0 source files have been analyzed
+03:39:25.914 INFO  Sensor Java Config Sensor [iac] (done) | time=24ms
+03:39:25.914 INFO  Sensor JavaScript/TypeScript analysis [javascript]
+03:39:26.052 INFO  Detected os: Linux arch: amd64 alpine: false. Platform: LINUX_X64
+03:39:26.053 INFO  Deploy location /opt/sonar-scanner/.sonar/js/node-runtime, tagetRuntime: /opt/sonar-scanner/.sonar/js/node-runtime/node,  version: /opt/sonar-scanner/.sonar/js/node-runtime/version.txt
+03:39:28.264 INFO  Using embedded Node.js runtime.
+03:39:28.265 INFO  Using Node.js executable: '/opt/sonar-scanner/.sonar/js/node-runtime/node'.
+03:39:29.424 INFO  Memory configuration: OS (15983 MB), Node.js (4144 MB).
+03:39:30.617 INFO  Found 0 tsconfig.json file(s): []
+03:39:30.681 INFO  Creating TypeScript program
+03:39:30.682 INFO  TypeScript configuration file /tmp/tsconfig-iorame.json
+03:39:30.682 INFO  30 source files to be analyzed
+03:39:31.005 INFO  Starting analysis with current program
+03:39:32.164 WARN  Failed to parse file [SAFE/localXssChallenge_2_correct.ts] at line 1: ';' expected.
+03:39:33.664 WARN  Failed to parse file [SAFE/chatbotPromptInjectionChallenge_2_correct.ts] at line 15: ';' expected.
+03:39:34.074 INFO  Analyzed 30 file(s) with current program
+03:39:34.078 INFO  30/30 source files have been analyzed
+03:39:34.079 INFO  Hit the cache for 0 out of 30
+03:39:34.080 INFO  Miss the cache for 30 out of 30: ANALYSIS_MODE_INELIGIBLE [30/30]
+03:39:34.080 INFO  Sensor JavaScript/TypeScript analysis [javascript] (done) | time=8169ms
+03:39:34.080 INFO  Sensor CSS Rules [javascript]
+03:39:34.081 INFO  No CSS, PHP, HTML or VueJS files are found in the project. CSS analysis is skipped.
+03:39:34.081 INFO  Sensor CSS Rules [javascript] (done) | time=1ms
+03:39:34.081 INFO  Sensor IaC Docker Sensor [iac]
+03:39:34.129 INFO  0 source files to be analyzed
+03:39:34.129 INFO  0/0 source files have been analyzed
+03:39:34.131 INFO  Sensor IaC Docker Sensor [iac] (done) | time=48ms
+03:39:34.132 INFO  Sensor TextAndSecretsSensor [text]
+03:39:34.133 INFO  Available processors: 4
+03:39:34.133 INFO  Using 4 threads for analysis.
+03:39:34.378 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test" or "tests"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+03:39:34.390 INFO  Using git CLI to retrieve untracked files
+03:39:34.394 WARN  Analyzing only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+03:39:34.405 INFO  30 source files to be analyzed
+03:39:34.525 INFO  30/30 source files have been analyzed
+03:39:34.526 INFO  Sensor TextAndSecretsSensor [text] (done) | time=395ms
+03:39:34.527 INFO  ------------- Run sensors on project
+03:39:34.617 INFO  Sensor Zero Coverage Sensor
+03:39:34.630 INFO  Sensor Zero Coverage Sensor (done) | time=13ms
+03:39:34.630 INFO  ------------- Gather SCA dependencies on project
+03:39:34.631 INFO  Dependency analysis skipped
+03:39:34.631 INFO  SCM Publisher is disabled
+03:39:34.637 INFO  CPD Executor 1 file had no CPD blocks
+03:39:34.638 INFO  CPD Executor Calculating CPD for 27 files
+03:39:34.664 INFO  CPD Executor CPD calculation finished (done) | time=27ms
+03:39:34.825 INFO  Analysis report generated in 150ms, dir size=616.9 kB
+03:39:34.887 INFO  Analysis report compressed in 62ms, zip size=262.0 kB
+03:39:35.088 INFO  Analysis report uploaded in 200ms
+03:39:35.093 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://sonar-benchmark:9000/dashboard?id=owasp-juice-shop-benchmark
+03:39:35.093 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+03:39:35.093 INFO  More about the report processing at http://sonar-benchmark:9000/api/ce/task?id=10105111-6b4f-4c73-b61e-f838722b4f86
+03:39:35.207 INFO  Analysis total time: 11.810 s
+03:39:35.208 INFO  SonarScanner Engine completed successfully
+03:39:35.546 INFO  EXECUTION SUCCESS
+03:39:35.547 INFO  Total time: 15.980s
+Unable to find image 'sonarsource/sonar-scanner-cli:11.3' locally
+11.3: Pulling from sonarsource/sonar-scanner-cli
+a0b8533c7258: Pulling fs layer
+24a4d528c221: Pulling fs layer
+4f4fb700ef54: Pulling fs layer
+76cc64d6a248: Pulling fs layer
+6585b34c8b2c: Pulling fs layer
+5fdc4c1249fc: Pulling fs layer
+4f4fb700ef54: Already exists
+4f4fb700ef54: Pull complete
+5fdc4c1249fc: Download complete
+a0b8533c7258: Download complete
+76cc64d6a248: Download complete
+6585b34c8b2c: Download complete
+24a4d528c221: Download complete
+76cc64d6a248: Pull complete
+a0b8533c7258: Pull complete
+24a4d528c221: Pull complete
+5fdc4c1249fc: Pull complete
+6585b34c8b2c: Pull complete
+Digest: sha256:7462f132388135e32b948f8f18ff0db9ae28a87c6777f1df5b2207e04a6d7c5c
+Status: Downloaded newer image for sonarsource/sonar-scanner-cli:11.3
