@@ -1,0 +1,97 @@
+name: Benchmark SAST x LLM
+
+# Reprodução de Pimentel & Progetti (SBSeg 2025, WTICG). Como no artigo original, os resultados de SAST do projeto
+# são os deste pipeline. Os LLMs (CodeLlama e DeepSeek-Coder) rodam localmente via Ollama (Lab/scan_llm.py) e suas
+# respostas ficam versionadas em Lab/resultados/llm/. Nenhum job faz commit: os resultados saem como artefatos
+# (aba Actions), que devem ser baixados e colocados em resultados/sast/.
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: benchmark-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sast:
+    name: SAST (Semgrep 1.49.0 e SonarQube Community 25.5)
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Ajustar vm.max_map_count (Elasticsearch do SonarQube)
+        run: sudo sysctl -w vm.max_map_count=262144
+
+      - name: Semgrep e SonarQube sobre Lab/dataset_sast
+        run: python Lab/rodar_sast.py
+
+      - name: Resumo
+        run: |
+          echo '### SAST' >> "$GITHUB_STEP_SUMMARY"
+          echo '```json' >> "$GITHUB_STEP_SUMMARY"
+          cat resultados/sast/meta_sast.json >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Artefato resultados-sast
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultados-sast
+          path: resultados/sast/
+          if-no-files-found: error
+          retention-days: 90
+
+  analise:
+    name: Análise (métricas, tipos, filtro e híbrido)
+    needs: [sast]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Dependências
+        run: pip install scikit-learn
+
+      - name: Baixar resultados-sast
+        uses: actions/download-artifact@v4
+        with:
+          name: resultados-sast
+          path: resultados/sast
+
+      # As respostas dos LLMs vêm de Lab/resultados/llm/ (rodadas localmente via Ollama e versionadas).
+      - name: Analisar
+        working-directory: Lab
+        run: |
+          python analisar_resultados.py
+          python resumo_repeticoes.py
+
+      - name: Resumo
+        run: |
+          cat resultados/analise/analise_llm.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Artefato resultados-analise
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultados-analise
+          path: |
+            resultados/analise/
+            resultados/repeticoes.md
+          retention-days: 90

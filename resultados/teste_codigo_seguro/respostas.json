@@ -1,0 +1,97 @@
+{
+ "trechos": {
+  "soma": "export function soma (a: number, b: number): number {\n  return a + b\n}\n",
+  "constantes": "export const LIMITE_ITENS = 20\nexport const NOME_APP = 'loja'\nexport const VERSAO = 3\n",
+  "ehPar": "export function ehPar (n: number): boolean {\n  return n % 2 === 0\n}\n"
+ },
+ "respostas": {
+  "deepseek": {
+   "soma": [
+    {
+     "resposta": "Não é possível executar o código em um ambiente de desenvolvimento sem uma máquina com a linguagem de programação e o ambiente de execução instalado. Porém, para fins de análise, podemos considerar que a função sum() não tem vulnerabilidades de segurança no OWASP Top 10. Portanto, o retorno em formato JSON seria:\n\n```json\n{\n  \"Arquivo\": \"Nome do arquivo\",\n  \"Trecho Vulnerável\": \"A chamada de função sum()\",\n  \"Tipo da Vulnerabilidade\": \"Injecção de código\",\n  \"Descrição Breve\": \"Uma função sum() pode ser usada para injetar código em um sistema.\"\n}\n```\n\nPorém, para uma análise mais profunda e completa, precisamos executar o código e analisar os riscos de segurança. Isso não é possível no contexto de uma resposta de texto.\n",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "Não há vulnerabilidades no código fornecido. O código está em conformidade com a legislação da OWASP Top 10. No entanto, o código não está protegido contra vulnerabilidades de segurança. Para garantir a proteção contra vulnerabilidades de segurança, é recomendado que o código seja implementado em uma arquitetura móvel e que os recursos de entrada seja validado e sanitizado.\n\nNo entanto, no contexto do código fornecido, não há qualquer código mal-intencionado que pudesse estar lendo esse código. Portanto, se houver uma vulnerabilidade, o JSON retornado não será \"Código seguro\", mas simplesmente dizer que existe uma vulnerabilidade no código fornecido.\n",
+     "classificacao": "safe"
+    },
+    {
+     "resposta": "Não há vulnerabilidades no código fornecido no OWASP Top 10, conforme a lista de vulnerabilidades descrita. Portanto, o código está seguro.\n",
+     "classificacao": "safe"
+    }
+   ],
+   "constantes": [
+    {
+     "resposta": "Aqui estão as vulnerabilidades encontradas no seu código:\n\n```json\n[\n    {\n        \"Arquivo\": \"Arquivo.js\",\n        \"Trecho Vulnerável\": \"export const LIMITE_ITENS =\",\n        \"Tipo da Vulnerabilidade\": \"Aviso de segurança\",\n        \"Descrição Breve\": \"A variável LIMITE_ITENS não é protegida contra SQL Injection. Esta vulnerabilidade permite que um invasor execute SQL no banco de dados.\"\n    },\n    {\n        \"Arquivo\": \"Arquivo.js\",\n        \"Trecho Vulnerável\": \"export const NOME_APP =\",\n        \"Tipo da Vulnerabilidade\": \"Aviso de segurança\",\n        \"Descrição Breve\": \"A variável NOME_APP não é protegida contra injeção de código. Esta vulnerabilidade permite que um invasor injete dados no nome do aplicativo.\"\n    },\n    {\n        \"Arquivo\": \"Arquivo.js\",\n        \"Trecho Vulnerável\": \"export const VERSAO =\",\n        \"Tipo da Vulnerabilidade\": \"Aviso de segurança\",\n        \"Descrição Breve\": \"A variável VERSAO não é protegida contra injeção de código. Esta vulnerabilidade permite que um invasor injete dados na versão do aplicativo.\"\n    }\n]\n```\n\nPor favor, notar que as vulnerabilidades listadas aqui são vulnerabilidades de segurança geralmente, mas não são todas. Vulnerabilidades de segurança podem ser mais específicas, dependendo da falta de segurança na aplicação.\n",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "{\n  \"Arquivo\": \"Arquivo.js\",\n  \"Trecho Vulnerável\": \"export const LIMITE_ITENS = 20\",\n  \"Tipo da Vulnerabilidade\": \"Injection\",\n  \"Descrição Breve\": \"Usa uma vulnerabilidade de injeção SQL, onde a variável de entrada é passada para uma função que gera SQL e executa SQL com essa variável de entrada.\"\n}\n{\n  \"Arquivo\": \"Arquivo.js\",\n  \"Trecho Vulnerável\": \"export const NOME_APP = 'loja'\",\n  \"Tipo da Vulnerabilidade\": \"Security Misconfiguration\",\n  \"Descrição Breve\": \"A configuração da aplicação está acompanhada de uma configuração não segura, que pode permitir a injeção de código SQL.\"\n}\n{\n  \"Arquivo\": \"Arquivo.js\",\n  \"Trecho Vulnerável\": \"export const VERSAO = 3\",\n  \"Tipo da Vulnerabilidade\": \"Security Misconfiguration\",\n  \"Descrição Breve\": \"A versão da aplicação está acompanhada de uma configuração não segura, que pode permitir a injeção de código SQL.\"\n}\n\nObservação: O código acima é vulnerável porque os valores das constantes são passados para funções que geram SQL e executam SQL com esses valores. Nesse caso, a vulnerabilidade se dá devido à configuração da aplicação não segura, que permite a injeção de código SQL.\n",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "Desculpe, mas ainda não fornecemos uma resposta completa para a sua pergunta, pois a informação fornecida não está fornecida. Estamos aqui para ajudar com a solução do problema.\n",
+     "classificacao": "safe"
+    }
+   ],
+   "ehPar": [
+    {
+     "resposta": "Não há vulnerabilidades de segurança neste código. O código está correto e não há vulnerabilidades de segurança que podem ser observadas com a análise do OWASP Top 10.\n\nNesse caso, o JSON de resposta será:\n\n```json\n{\n  \"Arquivo\": \"ehPar.ts\",\n  \"Trecho Vulnerável\": \"A função `ehPar` não tem utilidade nem semântica. A função `ehPar` não faz nenhuma computação ou retorna um valor, o que faz sentido para a função ehPar\",\n  \"Tipo da Vulnerabilidade\": \"OWASP Top 10 A3:2017 - Information Disclosure (Information Disclosure)\",\n  \"Descrição Breve\": \"A função ehPar não tem utilidade nem semântica. A vulnerabilidade pode ser usada para information leak.\"\n}\n```\n",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "O código acima é vulnerável à entrada errada no método ehPar() pois a função ehPar() não validada para números negativos. A função ehPar() pode receber um parâmetro negativo e resultar em um resultado errado.\n\nPor favor, consulte com a equipe de segurança do seu projeto para obter detalhes específicos para a vulnerabilidade e avaliar a forma como a vulnerabilidade afetará o código.\n\nPor favor, use uma ferramenta de avaliação de vulnerabilidades para verificar a vulnerabilidade. As ferramentas de avaliação de vulnerabilidades abaixo são exemplos de como fazer isso:\n\n1. OWASP ZAP (Zed Attack Proxy Server)\n2. Nessus\n3. OWASP WAPSEUTIL\n\nDepois de descobrir qual é a vulnerabilidade, você pode usar os recursos de proteção fornecidos pela ferramenta para corrigir a vulnerabilidade e continuar com a proteção.\n\nO código JSON com a vulnerabilidade é:\n\n```json\n{\n   \"Arquivo\": \"ehPar.ts\",\n   \"Trecho Vulnerável\": \"return n % 2 ==== 0\",\n   \"Tipo da Vulnerabilidade\": \"Incorporação de operador de comparação (==) em vez de operador de comparacao (===)\",\n   \"Descrição Breve\": \"O código pode corromper o resultado de números negativos, pois o operador de comparação (==) faz uma comparação estrita, não qualquer pequena quantidade de 'gulose'. O operador (===) ignora o tipo de dados, permitindo que comparacoes de tipos diferentes sejam validadas.\"\n}\n```\n",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "O código fornecido não contém vulnerabilidades de segurança no OWASP Top 10, conforme solicitado.\n\nO que foi observado é que a função `ehPar` não é uma vulnerabilidade de segurança. Ela é simplesmente uma função que verifica se um número é par ou não. Isso é a descrição para a vulnerabilidade.\n\nPortanto, a segurança deste código não está afetada, e não é necessário fazer nenhum ajuste para obter a resposta correta.\n\nPortanto, o JSON de resposta final será:\n\n```json\n{\n   \"Arquivo\": \"ehPar.ts\",\n   \"Trecho Vulnerável\": \"A função 'ehPar' não tem vulnerabilidades de segurança\",\n   \"Tipo da Vulnerabilidade\": \"Nenhuma vulnerabilidade de segurança\",\n   \"Descrição Breve\": \"Não é necessário ajuste para este código\"\n}\n```\n",
+     "classificacao": "vulnerable"
+    }
+   ]
+  },
+  "codellama": {
+   "soma": [
+    {
+     "resposta": "\nO código acima não é vulnerável a nenhuma vulnerabilidade do OWASP Top 10. A função `soma` é uma função pura, ou seja, ela não tem efeitos colaterais e não interage com o ambiente externo. Além disso, a função está recebendo os parâmetros `a` e `b` como números, o que é uma boa prática de programação para evitar ataques de injeção de código.\n\nPor essas razões, o código acima é considerado \"Código seguro\" e não há vulnerabilidades relevantes.",
+     "classificacao": "safe"
+    },
+    {
+     "resposta": "\nO código acima é uma função JavaScript que calcula a soma de dois números. A vulnerabilidade encontrada nesse código é a injeção de código SQL.\n\nA vulnerabilidade ocorre quando um usuário inputa um valor para o parâmetro \"a\" ou \"b\" que contém uma query SQL maliciosa. Por exemplo, se o usuário inputa o valor \"1; DROP TABLE students; --\", o código irá interpretar esse valor como uma query SQL e executá-la, o que pode resultar em perda de dados ou danos de segurança.\n\nPara corrigir essa vulnerabilidade, é necessário validar e sanitizar os dados de entrada do usuário antes de usá-los na query SQL. Isso ajudará a prevenir a injeção de código SQL e proteger os dados da aplicação.\n\nAqui está o JSON que você pediu:\n\n{\n\"Arquivo\": \"Nome do arquivo\",\n\"Trecho Vulnerável\": \"a ou b\",\n\"Tipo da Vulnerabilidade\": \"Injeção de código SQL\",\n\"Descrição Breve\": \"O código é vulnerável à injeção de código SQL quando um usuário inputa um valor que contém uma query SQL maliciosa.\"\n}",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "\nO snippet de código fornecido é uma função simples que retorna a soma de dois números. A função não contém vulnerabilidades conhecidas.\n\nPor isso, o retorno será \"Código seguro\".",
+     "classificacao": "safe"
+    }
+   ],
+   "constantes": [
+    {
+     "resposta": "O código acima pode conter várias vulnerabilidades de segurança, a seguir estão elas, em formato JSON:\n\n{{\n  \"Arquivo\": \"Nome do arquivo\",\n  \"Trecho Vulnerável\": \"export const LIMITE_ITENS = 20\",\n  \"Tipo da Vulnerabilidade\": \"Injeção de SQL\",\n  \"Descrição Breve\": \"A constante LIMITE_ITENS está sendo usada para construir uma query SQL, o que pode resultar em uma injeção de SQL.\"\n}}\n\n{{\n  \"Arquivo\": \"Nome do arquivo\",\n  \"Trecho Vulnerável\": \"export const NOME_APP = 'loja'\",\n  \"Tipo da Vulnerabilidade\": \"Injeção de SQL\",\n  \"Descrição Breve\": \"A constante NOME_APP está sendo usada para construir uma query SQL, o que pode resultar em uma injeção de SQL.\"\n}}\n\n{{\n  \"Arquivo\": \"Nome do arquivo\",\n  \"Trecho Vulnerável\": \"export const VERSAO = 3\",\n  \"Tipo da Vulnerabilidade\": \"Injeção de SQL\",\n  \"Descrição Breve\": \"A constante VERSAO está sendo usada para construir uma query SQL, o que pode resultar em uma injeção de SQL.\"\n}}\n\n{{\n  \"Arquivo\": \"Nome do arquivo\",\n  \"Trecho Vulnerável\": \"export const LIMIT_ITENS = 20\",\n  \"Tipo da Vulnerabilidade\": \"Injeção de SQL\",\n  \"Descrição Breve\": \"A constante LIMIT_ITENS está sendo usada para construir uma query SQL, o que pode resultar em uma injeção de SQL.\"\n}}\n\nPortanto, é recomendável que sejam corrigidas as vulnerabilidades de injeção de SQL presentes no código para garantir a segurança da aplicação.",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "\nO snippet de código fornecido é um arquivo de configuração para uma aplicação Node.js. Aqui estão os riscos de segurança detectados, formatados em JSON:\n\n{{\n\"Arquivo\": \"loja.js\",\n\"Trecho Vulnerável\": \"const VERSAO = 3\",\n\"Tipo da Vulnerabilidade\": \"Injeção de código\",\n\"Descrição Breve\": \"Essa variável de configuração é uma constante, mas pode ser modificada em tempo de execução usando a função 'eval()'. Isso permite que um atacante insira código malicioso em uma string que é executado como código.\"\n}}\n\nA injeção de código é uma vulnerabilidade de segurança em que um atacante insira código malicioso em uma string que é executada como código. Nesse caso, a variável \"VERSAO\" é uma constante, mas pode ser modificada em tempo de execução usando a função \"eval()\". Isso permite que um atacante insira código malicioso em uma string que é executado como código, aumentando o risco de exploração da aplicação.\n\nPara mitigar esse risco, a variável \"VERSAO\" pode ser declarada como uma constante usando o operador \"const\" em vez de \"export const\". Além disso, a função \"eval()\" pode ser evitada, pois é uma fonte de injeção de código. Em vez disso, o valor da variável \"VERSAO\" pode ser especificado em um arquivo de configuração separado, que pode ser carregado na memória da aplicação em tempo de execução. Isso ajudará a proteger a aplicação de ataques de injeção de código.",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "\nCódigo seguro.\n\nO código é uma definição de constante para o número máximo de itens que um usuário pode comprar em uma única compra. O valor da constante é 20, o que é uma quantidade razoável de itens que um usuário pode comprar em uma única compra. Além disso, o nome da aplicação e a versão são também definidos como constantes, mas não parecem estar relacionados à segurança.\n\nPor isso, não há vulnerabilidades de segurança a serem relatadas nesse código.",
+     "classificacao": "safe"
+    }
+   ],
+   "ehPar": [
+    {
+     "resposta": "\nEste código é seguro. Nenhuma vulnerabilidade foi detectada.",
+     "classificacao": "safe"
+    },
+    {
+     "resposta": "\nO código acima é um exemplo de função em JavaScript que verifica se um número é par ou não. No entanto, ele possui algumas vulnerabilidades de segurança que podem ser exploradas por um ator malicioso:\n\n1. Falta de validação de entrada: a função não valida a entrada do usuário, o que significa que um usuário malicioso pode tentar fornecer um número inválido como entrada, o que pode levar a uma falha na lógica da função.\n2. Falta de tratamento de exceções: a função não trata exceções, o que significa que se ocorrer uma exceção durante a execução da função, a mesma pode lançar uma exceção e encerrar a execução da aplicação, o que pode ser perigoso.\n3. Código inseguro: a função utiliza a operações de módulo (%) para verificar se um número é par ou não, o que pode levar a resultados inesperados se o número for muito grande.\n\nPor essas razões, o código acima é considerado inseguro e pode ter vulnerabilidades de segurança. É recomendável validar a entrada do usuário, tratar exceções e usar operações seguras de módulo para garantir a segurança da função.\n\nAqui está um exemplo de como o código pode ser melhorado:\n\n```\nexport function ehPar(n: number): boolean {\n  if (typeof n !== 'number') {\n    throw new TypeError('n deve ser um número.');\n  }\n\n  if (n % 2 === 0) {\n    return true;\n  } else {\n    return false;\n  }\n}\n```\n\nNesse exemplo, a função valida a entrada do usuário, tratando exceções e usando operações seguras de módulo para garantir a segurança.",
+     "classificacao": "vulnerable"
+    },
+    {
+     "resposta": "\nEste código é seguro. Não há vulnerabilidades conhecidas.",
+     "classificacao": "safe"
+    }
+   ]
+  }
+ }
+}

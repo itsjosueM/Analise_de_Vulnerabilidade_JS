@@ -301,7 +301,21 @@ function configureApp (app: ReturnType<typeof express>, seq: typeof sequelize) {
   app.post('/profile/image/url', uploadToMemory.single('file'), utils.asyncHandler(profileImageUrlUpload()))
   app.post('/rest/memories', uploadToDisk.single('image'), ensureFileIsPassed, security.appendUserId(), metrics.observeFileUploadMetricsMiddleware(), utils.asyncHandler(addMemory()))
 
-  app.use(bodyParser.text({ type: '*
+  app.use(bodyParser.text({ type: '*/*' }))
+  app.use(function jsonParser (req: Request, res: Response, next: NextFunction) {
+
+    req.rawBody = req.body
+    if (req.headers['content-type']?.includes('application/json')) {
+      if (!req.body) {
+        req.body = {}
+      }
+      if (req.body !== Object(req.body)) {
+        req.body = JSON.parse(req.body)
+      }
+    }
+    next()
+  })
+
   const accessLogStream = getStream({
     filename: path.resolve('logs/access.log.%DATE%'),
     date_format: 'YYYY-MM-DD',
